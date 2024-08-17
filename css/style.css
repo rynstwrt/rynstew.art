@@ -13,6 +13,17 @@ body {
   background-color: #121619;
   color: #FCEFEF;
   font-family: "ocr-a-std", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+body h1 {
+  margin-bottom: 12px;
+}
+body p {
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
