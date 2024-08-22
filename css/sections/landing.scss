@@ -1,6 +1,7 @@
-@import "partials/colors";
-@import "partials/breakpoints";
-@import "partials/fonts";
+@import "../util/colors";
+@import "../util/breakpoints";
+@import "../util/fonts";
+@import "../components/header";
 
 
 section#landing

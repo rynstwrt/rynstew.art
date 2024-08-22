@@ -1,6 +1,6 @@
-@import "partials/_colors";
-@import "partials/_fonts";
-@import "partials/_breakpoints";
+@import "../util/colors";
+@import "../util/fonts";
+@import "../util/breakpoints";
 
 
 header
@@ -50,8 +50,8 @@ header
             width: $size;
             height: $size;
             background-color: $accent;
-            mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
-            -webkit-mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
+            mask: url("../../assets/images/logo/hexagonlogo.svg") no-repeat center;
+            -webkit-mask: url("../../assets/images/logo/hexagonlogo.svg") no-repeat center;
         }
     }
 

@@ -1,6 +1,6 @@
-@import "partials/colors";
-@import "partials/fonts";
-@import "partials/breakpoints";
+@import "util/colors";
+@import "util/fonts";
+@import "util/breakpoints";
 
 
 *
@@ -124,28 +124,4 @@ section
         }
     }
 }
-
-
-//#about-page, #projects-page
-//{
-//    a
-//    {
-//        font-family: inherit;
-//        border: 1px solid $accent;
-//        background-color: transparent;
-//        color: inherit;
-//        font-size: 15px;
-//        letter-spacing: 1px;
-//        padding: 10px 20px;
-//        transition: background-color .1s ease-in-out;
-//        border-radius: 5px;
-//
-//        &:hover
-//        {
-//            background-color: $accent;
-//            cursor: pointer;
-//        }
-//    }
-//}
-
 
