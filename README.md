@@ -1,2 +1,2 @@
-# www.rynstew.art
- Ryn's website! (WIP)
+# www\.rynstew.art
+Repo for https://www.rynstew.art
