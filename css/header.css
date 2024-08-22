@@ -1,0 +1,79 @@
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 30px;
+}
+header #logo-and-name, header nav {
+  display: flex;
+  align-items: center;
+}
+header #logo-and-name {
+  display: flex;
+  align-items: center;
+}
+header #logo-and-name h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  max-width: 100px;
+}
+@media (min-width: 400px) {
+  header #logo-and-name h1 {
+    max-width: none;
+  }
+}
+header #logo-and-name #header-logo {
+  display: none;
+  margin-right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #ff7129;
+  mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
+  -webkit-mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
+}
+@media (min-width: 768px) {
+  header #logo-and-name #header-logo {
+    display: flex;
+  }
+}
+header nav {
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+  }
+}
+header nav ul li {
+  list-style: none;
+  margin: 0 8px;
+  display: flex;
+}
+header nav ul li a {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  font-weight: 400;
+  transition: border-bottom-color 0.15s ease-in-out;
+}
+@media (min-width: 768px) {
+  header nav ul li a {
+    padding-bottom: 5px;
+  }
+}
+header nav ul li a span {
+  margin-right: 4px;
+}
+header nav ul li a:hover {
+  border-bottom: 1px solid #ff7129;
+}
+
+/*# sourceMappingURL=header.css.map */

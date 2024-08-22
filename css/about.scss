@@ -1,17 +1,18 @@
 @import "partials/fonts";
 @import "partials/colors";
 
-#about-page
+
+section#about
 {
     display: flex;
     justify-content: center;
 
     .center-page-content
     {
-        .text-section, #about-image
-        {
-            margin-bottom: 20px;
-        }
+        //.text-section, #about-image
+        //{
+        //    margin-bottom: 20px;
+        //}
 
         #about-image
         {
