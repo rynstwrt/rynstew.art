@@ -1,0 +1,25 @@
+section#projects
+{
+    display: flex;
+    justify-content: center;
+    //height: auto;
+
+    .project
+    {
+        &:not(&:last-of-type)
+        {
+            margin-bottom: 30px;
+        }
+
+        .project-buttons
+        {
+            margin-top: 12px;
+            display: flex;
+
+            .link-button:not(:last-child)
+            {
+                margin-right: 15px;
+            }
+        }
+    }
+}

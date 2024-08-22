@@ -13,10 +13,10 @@ section#about .center-page-content #about-image img {
   width: 100%;
   height: 100%;
 }
-section#about .center-page-content .text-section#resume-section {
-  margin-top: 40px;
+section#about .center-page-content .text-section {
+  margin: 20px 0;
 }
-section#about .center-page-content .text-section .link-button {
+section#about .center-page-content #resume-button.link-button {
   margin-top: 10px;
   width: fit-content;
 }

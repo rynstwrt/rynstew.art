@@ -1,0 +1,18 @@
+section#contact {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+section#contact #socials-row {
+  width: 100%;
+}
+section#contact #socials-row a {
+  font-size: 30px;
+  margin-right: 10px;
+  transition: color 0.1s ease-in-out;
+}
+section#contact #socials-row a:hover {
+  color: #ff7129;
+}
+
+/*# sourceMappingURL=contact.css.map */

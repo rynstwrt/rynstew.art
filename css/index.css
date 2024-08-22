@@ -41,6 +41,12 @@ p {
   color: #ff7129;
 }
 
+.divider {
+  border-bottom: 1px solid #252828;
+  width: 250px;
+  margin: 0 auto;
+}
+
 .link-button {
   font-family: inherit;
   border: 1px solid #ff7129;

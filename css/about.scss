@@ -9,11 +9,6 @@ section#about
 
     .center-page-content
     {
-        //.text-section, #about-image
-        //{
-        //    margin-bottom: 20px;
-        //}
-
         #about-image
         {
             $size: 130px;
@@ -32,16 +27,13 @@ section#about
 
         .text-section
         {
-            &#resume-section
-            {
-                margin-top: 40px;
-            }
+            margin: 20px 0;
+        }
 
-            .link-button
-            {
-                margin-top: 10px;
-                width: fit-content;
-            }
+        #resume-button.link-button
+        {
+            margin-top: 10px;
+            width: fit-content;
         }
     }
 }

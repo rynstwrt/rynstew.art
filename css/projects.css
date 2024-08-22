@@ -1,0 +1,16 @@
+section#projects {
+  display: flex;
+  justify-content: center;
+}
+section#projects .project:not(section#projects .project:last-of-type) {
+  margin-bottom: 30px;
+}
+section#projects .project .project-buttons {
+  margin-top: 12px;
+  display: flex;
+}
+section#projects .project .project-buttons .link-button:not(:last-child) {
+  margin-right: 15px;
+}
+
+/*# sourceMappingURL=projects.css.map */
