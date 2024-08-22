@@ -46,12 +46,9 @@
     <link rel="stylesheet" type="text/css" href="css/contact-page.css">
 
     <!--  SCRIPTS  -->
-    <script src="https://kit.fontawesome.com/d1ed772a88.js" crossorigin="anonymous" defer></script>
+    <script src="js/libraries/fontawesomekit.js" defer></script>
     <script src="js/libraries/particles.min.js"></script>
-    <script src="js/particlesjs-handler.js" defer></script>
-    <script src="js/navbar.js" defer></script>
-    <script src="js/get-started.js" defer></script>
-    <script src="js/resume.js" defer></script>
+    <script src="js/particles.js" defer></script>
 </head>
 <body>
     <div id="particles"></div>
@@ -85,7 +82,7 @@
             <h2>I'm <span class="accent">Ryn</span>.</h2>
             <h2>Full Stack Developer.</h2>
             <p><span class="accent">Thanks</span> for checking out my site!</p>
-            <button id="get-started">Get Started</button>
+            <a id="get-started" class="link-button" href="#about-page">Get Started</a>
         </div>
     </section>
 
@@ -98,7 +95,7 @@
             </div>
             <div id="about-image-row">
                 <div id="about-image">
-                    <img src="assets/images/Ryn.jpg" alt="A picture of Ryn Stewart.">
+                    <img src="assets/images/ryn.jpg" alt="A picture of Ryn Stewart.">
                 </div>
             </div>
             <div class="text-section">
@@ -111,7 +108,7 @@
             </div>
             <div class="text-section" id="resume-section">
                 <h4>Download My Resume:</h4>
-                <button id="resume-button">DOWNLOAD RESUME</button>
+                <a id="resume-button" class="link-button" href="assets/pdfs/resume.pdf" target="_blank">DOWNLOAD RESUME</a>
             </div>
         </div>
     </section>

@@ -19,8 +19,9 @@
 #about-page .center-page-content .text-section#resume-section {
   margin-top: 40px;
 }
-#about-page .center-page-content .text-section button {
+#about-page .center-page-content .text-section .link-button {
   margin-top: 10px;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=about-page.css.map */

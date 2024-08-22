@@ -38,8 +38,8 @@
   width: 35px;
   height: 35px;
   background-color: #ff7129;
-  mask: url("../assets/logos/hexagonlogo.svg") no-repeat center;
-  -webkit-mask: url("../assets/logos/hexagonlogo.svg") no-repeat center;
+  mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
+  -webkit-mask: url("../assets/images/logo/hexagonlogo.svg") no-repeat center;
 }
 @media (min-width: 768px) {
   #home-page header #logo-and-name #header-logo {
@@ -68,6 +68,7 @@
   padding-bottom: 2px;
   margin-bottom: 2px;
   font-weight: 400;
+  transition: border-bottom-color 0.15s ease-in-out;
 }
 @media (min-width: 768px) {
   #home-page header nav ul li a {
@@ -102,7 +103,7 @@
   font-size: 17px;
   font-weight: 400;
 }
-#home-page #center-content button {
+#home-page #center-content #get-started {
   margin-top: 30px;
 }
 
