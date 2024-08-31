@@ -18,13 +18,12 @@ section#landing
         h2
         {
             font-size: 23px;
+            letter-spacing: 2px;
 
             @include md()
             {
                 font-size: 40px;
             }
-
-            letter-spacing: 2px;
         }
 
         p
@@ -40,6 +39,28 @@ section#landing
         #get-started
         {
             margin-top: 30px;
+        }
+
+        #socials-row
+        {
+            width: 100%;
+            margin-top: 15px;
+
+            a
+            {
+                font-size: 27px;
+                transition: color .1s ease-in-out;
+
+                &:hover
+                {
+                    color: $accent;
+                }
+
+                &:not(:last-child)
+                {
+                    margin-right: 12px;
+                }
+            }
         }
     }
 }

@@ -105,5 +105,19 @@ section#landing #center-content p {
 section#landing #center-content #get-started {
   margin-top: 30px;
 }
+section#landing #center-content #socials-row {
+  width: 100%;
+  margin-top: 15px;
+}
+section#landing #center-content #socials-row a {
+  font-size: 27px;
+  transition: color 0.1s ease-in-out;
+}
+section#landing #center-content #socials-row a:hover {
+  color: #ff7129;
+}
+section#landing #center-content #socials-row a:not(:last-child) {
+  margin-right: 12px;
+}
 
 /*# sourceMappingURL=landing.css.map */
