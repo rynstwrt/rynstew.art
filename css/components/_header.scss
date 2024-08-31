@@ -30,6 +30,7 @@ header
             font-weight: $header-5;
             letter-spacing: 1px;
             max-width: 100px;
+            word-spacing: -8px;
 
             @include sm
             {

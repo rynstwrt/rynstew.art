@@ -20,6 +20,7 @@ header #logo-and-name h1 {
   font-weight: 700;
   letter-spacing: 1px;
   max-width: 100px;
+  word-spacing: -8px;
 }
 @media (min-width: 400px) {
   header #logo-and-name h1 {
