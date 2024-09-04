@@ -1,7 +1,7 @@
 section#skills .center-page-content .skill-section {
   background-color: #1f1f2a;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 20px 16px;
+  border-radius: 7px;
 }
 section#skills .center-page-content .skill-section h4 {
   margin-bottom: 7px;
@@ -36,7 +36,7 @@ section#skills .center-page-content .skill-section .skill-row .skill-bar-contain
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
 }
 section#skills .center-page-content .skill-section:not(:last-of-type) {
   margin-bottom: 15px;

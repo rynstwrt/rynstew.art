@@ -9,8 +9,8 @@ section#skills
         .skill-section
         {
             background-color: $card-color;
-            padding: 15px;
-            border-radius: 5px;
+            padding: 20px 16px;
+            border-radius: 7px;
 
             h4
             {
@@ -54,7 +54,7 @@ section#skills
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        box-shadow: 0 0 5px rgba(0, 0, 0, .25) inset;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, .15) inset;
                     }
                 }
             }
