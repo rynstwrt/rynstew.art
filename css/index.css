@@ -87,6 +87,11 @@ section .center-page-content {
   width: 100%;
   max-width: 500px;
 }
+@media (min-width: 992px) {
+  section .center-page-content {
+    max-width: 700px;
+  }
+}
 section .center-page-content h3 {
   width: fit-content;
   border-bottom: 1px solid #ff7129;
