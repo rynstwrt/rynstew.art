@@ -1,0 +1,68 @@
+@import "../util/fonts";
+@import "../util/colors";
+
+
+section#skills
+{
+    .center-page-content
+    {
+        .skill-section
+        {
+            background-color: $card-color;
+            padding: 15px;
+            border-radius: 5px;
+
+            h4
+            {
+                margin-bottom: 7px;
+            }
+
+            .skill-row
+            {
+                margin-bottom: 10px;
+
+                p
+                {
+                    margin-bottom: 4px;
+                    font-weight: 400;
+                }
+
+                .skill-bar-container
+                {
+                    background-color: darken($card-color, 4%);
+                    width: 100%;
+                    height: 12px;
+                    border-radius: 5px / 50%;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 2;
+
+                    .skill-bar
+                    {
+                        display: block;
+                        background-color: $accent;
+                        width: 50%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    &:after
+                    {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, .25) inset;
+                    }
+                }
+            }
+
+            &:not(:last-of-type)
+            {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
