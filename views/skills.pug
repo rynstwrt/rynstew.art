@@ -1,3 +1,6 @@
+include includes/skillbar
+
+
 section#skills
     .center-page-content
         h3 Skills
@@ -6,50 +9,61 @@ section#skills
             h4 Code
             .skill-row
                 p HTML:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("100%")
             .skill-row
                 p CSS:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("95%")
+            .skill-row
+                p SCSS:
+                +skillbar("95%")
             .skill-row
                 p JS:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("100%")
+            .skill-row
+                p NodeJS:
+                +skillbar("90%")
+            .skill-row
+                p Java:
+                +skillbar("80%")
+            .skill-row
+                p Python:
+                +skillbar("85%")
+            .skill-row
+                p C/C++:
+                +skillbar("70%")
+            .skill-row
+                p C#:
+                +skillbar("50%")
+            .skill-row
+                p SQL:
+                +skillbar("60%")
 
         .skill-section
             h4 Design
             .skill-row
                 p Photoshop:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("90%")
             .skill-row
                 p Illustrator:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("75%")
 
         .skill-section
             h4 Audio
             .skill-row
                 p Ableton:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("75%")
             .skill-row
                 p Pro Tools:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("50%")
 
         .skill-section
             h4 Modeling
             .skill-row
+                p OpenSCAD:
+                +skillbar("90%")
+            .skill-row
                 p Maya:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("65%")
             .skill-row
                 p Blender:
-                .skill-bar-container
-                    span.skill-bar
-            .skill-row
-                p OpenSCAD:
-                .skill-bar-container
-                    span.skill-bar
+                +skillbar("45%")

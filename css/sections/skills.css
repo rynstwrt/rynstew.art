@@ -4,30 +4,37 @@ section#skills .center-page-content .skill-section {
   border-radius: 7px;
 }
 section#skills .center-page-content .skill-section h4 {
-  margin-bottom: 7px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: #ff7129;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
 }
 section#skills .center-page-content .skill-section .skill-row {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 section#skills .center-page-content .skill-section .skill-row p {
-  margin-bottom: 4px;
+  margin-right: 5px;
   font-weight: 400;
+  width: 100%;
+  text-align: right;
 }
 section#skills .center-page-content .skill-section .skill-row .skill-bar-container {
   background-color: #16161e;
-  width: 100%;
+  min-width: 550px;
   height: 12px;
   border-radius: 5px/50%;
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 99;
 }
 section#skills .center-page-content .skill-section .skill-row .skill-bar-container .skill-bar {
   display: block;
   background-color: #ff7129;
-  width: 50%;
   height: 100%;
-  z-index: 1;
+  border-radius: 5px/50%;
 }
 section#skills .center-page-content .skill-section .skill-row .skill-bar-container:after {
   content: "";
@@ -36,7 +43,7 @@ section#skills .center-page-content .skill-section .skill-row .skill-bar-contain
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) inset;
 }
 section#skills .center-page-content .skill-section:not(:last-of-type) {
   margin-bottom: 15px;
