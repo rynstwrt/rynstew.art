@@ -64,6 +64,38 @@ p {
   cursor: pointer;
 }
 
+#popup-container {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+#popup-container .popup {
+  background-color: #1f1f2a;
+  padding: 15px 40px;
+  border-radius: 7px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.15s ease-in-out;
+}
+#popup-container .popup.hidden {
+  opacity: 0;
+}
+#popup-container .popup#email-copied-popup > p:last-of-type {
+  margin-top: 5px;
+}
+#popup-container .popup p {
+  text-align: center;
+  letter-spacing: unset;
+}
+#popup-container .popup p.highlight {
+  color: #ff7129;
+  font-weight: 400;
+}
+
 #particles {
   position: fixed;
   top: 0;
