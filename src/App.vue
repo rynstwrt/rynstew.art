@@ -16,7 +16,7 @@ import Background from "@/components/Background.vue";
 
 
 <style lang="scss" >
-
+@import '/sr'
 
 
 * {
