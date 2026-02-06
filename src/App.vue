@@ -1,14 +1,94 @@
-
 <script setup>
-    // import Background from "./Background.vue";
-    import { ref } from "vue";
+import { ref } from "vue";
 
-    // const background = ref(null);
+
 </script>
 
+
+
 <template>
-    <!--<Background />-->
-    <canvas ref="background"></canvas>
+
+    <!--<div id="app">-->
+    <!--    <vue-particles id="tsparticles" -->
+    <!--        @particles-loaded="particlesLoaded" -->
+    <!--        url="http://foo.bar/particles.json" />-->
+
+        <vue-particles
+            id="tsparticles"
+            @particles-loaded="particlesLoaded"
+            :options="{
+                    background: {
+                        color: {
+                            value: '#0d47a1'
+                        }
+                    },
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onClick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            onHover: {
+                                enable: true,
+                                mode: 'repulse'
+                            },
+                        },
+                        modes: {
+                            bubble: {
+                                distance: 400,
+                                duration: 2,
+                                opacity: 0.8,
+                                size: 40
+                            },
+                            push: {
+                                quantity: 4
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4
+                            }
+                        }
+                    },
+                    particles: {
+                        color: {
+                            value: '#ffffff'
+                        },
+                        links: {
+                            color: '#ffffff',
+                            distance: 150,
+                            enable: true,
+                            opacity: 0.5,
+                            width: 1
+                        },
+                        move: {
+                            direction: 'none',
+                            enable: true,
+                            outModes: 'bounce',
+                            random: false,
+                            speed: 6,
+                            straight: false
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                            },
+                            value: 80
+                        },
+                        opacity: {
+                            value: 0.5
+                        },
+                        shape: {
+                            type: 'circle'
+                        },
+                        size: {
+                            value: { min: 1, max: 5 }
+                        }
+                    },
+                    detectRetina: true
+                }"
+        />
+
     <h1>App</h1>
     <router-link to="/">Home</router-link>
     <router-link to="/portfolio">Portfolio</router-link>
@@ -17,48 +97,10 @@
 
 
 
-<script>
-import * as THREE from "three";
-
-const WIDTH = window.innerWidth;
-const HEIGHT = window.innerHeight;
-
-const camera = new THREE.PerspectiveCamera(75, WIDTH / HEIGHT, 0.1, 100);
-camera.position.z = -5;
-
-const scene = new THREE.Scene();
-
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({
-    color: 0xFF0000
-});
-
-const mesh = new THREE.Mesh(geometry, material);
-scene.add(mesh);
-
-// const canvas = document.querySelector("#background");
-// console.log(canvas);
-
-const renderer = new THREE.WebGLRenderer({
-    antialias: true,
-    canvas: this.querySelector("canvas")
-});
-renderer.setSize(WIDTH / HEIGHT);
-renderer.setAnimationLoop(animate);
-// document.body.appendChild(renderer.domElement);
-
-function animate(time) {
-    mesh.rotation.x = time / 2000;
-    mesh.rotation.y = time / 2000;
-    renderer.render(scene, camera);
-}
-</script>
-
-
 <style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    canvas {
+        z-index: -1;
+        //background-color: transparent;
+        height: 100px;
+    }
 </style>
