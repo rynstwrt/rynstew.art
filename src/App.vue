@@ -1,22 +1,23 @@
 <script setup>
 import Background from "@/components/Background.vue";
+import Header from "@/components/Header.vue";
 </script>
 
 
 
 <template>
-    <Background />
+    <Background
+        particleColor='#FFFFFF'
+        particleOpacity='0.4' />
 
-    <!--<router-link to="/">Home</router-link>-->
-    <!--<router-link to="/tech">Tech</router-link>-->
-    <!--<router-link to="/art">Portfolio</router-link>-->
-    <!---->
+    <Header />
+
     <router-view />
 </template>
 
 
 <style lang="scss" >
-@import '/sr'
+@use '@/css/constants' as *;
 
 
 * {
@@ -24,6 +25,8 @@ import Background from "@/components/Background.vue";
     padding: 0;
     box-sizing: border-box;
     font-family: $font-1;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 
@@ -33,8 +36,9 @@ html, body {
 
 
 body {
-    background-color: $color-primary;
-    color: white;
+    background-color: $color-background;
+    color: $color-light;
+    padding: 20px;
 }
 
 
@@ -45,11 +49,11 @@ body {
     justify-content: center;
     align-items: center;
 }
-</style>
 
 
-<style scoped>
-canvas {
-    z-index: -1;
+a {
+    color: inherit;
+    text-decoration: none;
+    //font-family: inherit;
 }
 </style>

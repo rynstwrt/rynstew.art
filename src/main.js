@@ -28,4 +28,6 @@ const particlesInit = {
 createApp(App)
 .use(router)
 .use(Particles, particlesInit)
+// .use(LightGallery)
+// .use('VGallery', VueGallery)
 .mount("#app");
