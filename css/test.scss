@@ -4,32 +4,33 @@ button {
     padding: 7px;
     aspect-ratio: 1;
     border-color: $color-surface-2;
-//opacity: 0.75;
+    //opacity: 0.75;
     transition: opacity 0.1s ease-out;
-//transition:
-opacity: 0.75;
+    //transition:
+    opacity: 0.75;
 
     svg {
         height: 20px;
         width: auto;
-    //color: $color-light-2;
-    //color: $color-light;
-    //stroke-width: 1.5px;
+        //color: $color-light-2;
+        //color: $color-light;
+        //stroke-width: 1.5px;
     }
 
     &:hover {
         opacity: 1;
 
-    //svg {
-    //    color: $color-light;
-    //}
+
+        //svg {
+        //    color: $color-light;
+        //}
     }
 
 
     display: flex;
     justify-content: center;
     align-items: center;
-//padding: 5px 15px;
+    //padding: 5px 15px;
     border-radius: 5px;
     background-color: transparent;
     border: 1px solid $color-primary;

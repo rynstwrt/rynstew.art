@@ -1,6 +1,7 @@
 import * as Vue from "./lib/vue/vue.esm-browser.js";
 import "./lib/vue3-sfc-loader/vue3-sfc-loader.js";
 import * as sass from 'https://jspm.dev/sass';
+console.log(sass)
 
 
 const VUE_MODULE_DIR = "/js/components/";
