@@ -28,22 +28,11 @@ body {
   bottom: 0;
   left: 0;
   z-index: -2;
-  opacity: 0.4;
+  opacity: 0.2;
   pointer-events: none;
   width: 100%;
   height: 100%;
-}
-#bg-particles::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0.2;
-  backdrop-filter: blur(7px);
-  z-index: -1;
+  mix-blend-mode: lighten;
 }
 
 button {
@@ -70,23 +59,20 @@ button:hover, button.active {
 }
 
 section {
+  padding: 45px 15px;
+}
+section#landing {
+  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
-}
-
-section#landing {
-  height: 100%;
-  position: relative;
 }
 section#landing main {
-  padding: 50px 30px;
-  border-radius: 2px;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
-  width: calc(100% - 25px);
   max-width: 600px;
 }
 section#landing main h1 {
@@ -111,20 +97,20 @@ section#landing main p {
   font-variation-settings: "wdth" normal;
 }
 section#landing main button#learn-more-btn {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 section#landing main #landing-links {
   display: flex;
   margin-top: 25px;
-  grid-column-gap: 12px;
+  grid-column-gap: 10px;
 }
 section#landing main #landing-links a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 22px;
-  opacity: 0.7;
-  transition: opacity 0.1s ease-out;
+  opacity: 0.85;
+  transition: opacity 0.1s ease-out, color 0.1s ease-out;
   background-color: #1b1b1b;
   padding: 5px;
   box-sizing: content-box;
@@ -132,6 +118,9 @@ section#landing main #landing-links a {
 }
 section#landing main #landing-links a:hover {
   opacity: 1;
+}
+section#landing main #landing-links a:hover svg {
+  color: #e7e7e7;
 }
 section#landing main #landing-links a svg {
   color: #b9b8b8;
@@ -152,33 +141,74 @@ section#landing #down-chevron-container svg {
   height: min-content;
 }
 
-section#portfolio {
-  min-height: 100%;
-  padding: 15px;
-  justify-content: flex-start;
-}
-section#portfolio #portfolio-content {
-  width: 100%;
-}
-section#portfolio #portfolio-content #tabs-row {
+section#portfolios {
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#portfolios #portfolio-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #FF6600;
+  height: fit-content;
+  background-color: rgba(27, 27, 27, 0.95);
+  overflow: hidden;
+}
+section#portfolios #portfolio-content #tabs-row {
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  column-gap: 5px;
+  background-color: rgba(27, 27, 27, 0.95);
 }
-section#portfolio #portfolio-content #tabs-row button {
+section#portfolios #portfolio-content #tabs-row button {
   flex: 1;
+  border: none;
+  border-radius: 3px;
+  padding: 7px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
-section#portfolio #portfolio-content #tab-container {
-  background-color: blue;
-  height: 100%;
+section#portfolios #portfolio-content #tabs-row button:first-of-type {
+  border-top-left-radius: 5px;
 }
-section#portfolio #portfolio-content #tab-container .portfolio {
-  background-color: green;
+section#portfolios #portfolio-content #tabs-row button:first-of-type.active {
+  box-shadow: 10px 0 6px rgba(0, 0, 0, 0.08);
 }
-section#portfolio #portfolio-content #tab-container .portfolio:not(.active) {
+section#portfolios #portfolio-content #tabs-row button:last-of-type {
+  border-top-right-radius: 5px;
+}
+section#portfolios #portfolio-content #tabs-row button:last-of-type.active {
+  box-shadow: -10px 0 6px rgba(0, 0, 0, 0.08);
+}
+section#portfolios #portfolio-content #tabs-row button:not(:first-of-type, :last-of-type) {
+  border-left: none;
+  border-right: none;
+}
+section#portfolios #portfolio-content #tabs-row button:not(.active) {
+  opacity: 0.6;
+}
+section#portfolios #portfolio-content #portfolio-container .portfolio {
+  padding: 12px;
+}
+section#portfolios #portfolio-content #portfolio-container .portfolio:not(.active) {
   display: none;
+}
+
+section#contact {
+  display: none;
+}
+section#contact h2 {
+  color: #FF6600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-variation-settings: "wdth" normal;
 }
 
 /*# sourceMappingURL=index.css.map */
