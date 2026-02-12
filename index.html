@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
@@ -8,14 +9,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <title>rynstew.art</title>
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
+    <!-- SCRIPTS -->
     <script src="./js/lib/particles.js"></script>
     <script src="./js/bg-particles.js" defer></script>
-
-    <!--<script src="./js/lib/anime.js"></script>-->
-
-    <!--<script src="./js/ui-manager.js" defer></script>-->
     <script type="module" src="./js/ui-manager.js" defer></script>
 </head>
 <body>
@@ -24,9 +28,7 @@
     <section id="landing">
         <main>
             <h1>Ryn Stewart</h1>
-            <p>Artist & Full Stack Developer.</p>
-
-            <p>Thanks for checking out my site!</p>
+            <p id="byline">Artist & Full Stack Developer.</p>
 
             <div id="landing-links">
                 <a href="https://github.com/rynstwrt/" target="_blank">
@@ -105,6 +107,8 @@
                     </svg>
                 </a>
             </div>
+
+            <button id="learn-more-btn">Learn More</button>
         </main>
 
         <div id="down-chevron-container">
@@ -118,15 +122,35 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="feather feather-chevron-down">
-                <polyline
-                        points="6 9 12 15 18 9"></polyline>
+                <polyline points="6 9 12 15 18 9" />
             </svg>
         </div>
     </section>
 
 
-    <section id="">
-        <p>asdfs</p>
+    <section id="portfolio">
+        <div id="portfolio-content">
+            <div id="tabs-row">
+                <button id="art-tab" class="active">Art</button>
+                <button id="tech-tab">Tech</button>
+                <button id="contact-tab">Contact</button>
+            </div>
+
+            <div id="tab-container">
+                <div id="art" class="portfolio">
+                    <h3>art</h3>
+                </div>
+
+                <div id="tech" class="portfolio">
+                    <h3>tech</h3>
+                </div>
+
+                <div id="contact" class="portfolio">
+                    <h3>contact</h3>
+                </div>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>
