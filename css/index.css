@@ -52,29 +52,6 @@ body::after {
   height: 100%;
 }
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: transparent;
-  border: 1px solid #FF6600;
-  color: #FF6600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 0.9rem;
-  width: fit-content;
-  cursor: pointer;
-  transition: background-color 0.1s ease-out, color 0.1s ease-out, font-weight 0.1s ease-out;
-  text-align: center;
-}
-button:not(.icon-button):hover, button.active {
-  color: #131314;
-  background-color: #FF6600;
-  font-weight: 600;
-}
-
 section {
   padding: 45px 15px;
   min-height: 300px;
@@ -144,26 +121,6 @@ section#landing main #landing-links a svg {
   height: 100%;
   min-width: 100%;
   padding: 1px;
-}
-section#landing main #landing-links button#learn-more-btn {
-  width: 100%;
-  height: 100%;
-}
-section#landing main #landing-links .icon-button {
-  padding: 7px;
-  aspect-ratio: 1;
-  border-color: #272a2c;
-  transition: opacity 0.1s ease-out;
-  opacity: 0.75;
-}
-section#landing main #landing-links .icon-button svg {
-  height: 20px;
-  width: auto;
-  color: #e7e7e7;
-  stroke-width: 1.5px;
-}
-section#landing main #landing-links .icon-button:hover {
-  opacity: 1;
 }
 section#landing #down-chevron-container {
   width: 45px;

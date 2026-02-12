@@ -3,12 +3,10 @@ const props = defineProps(["url"]);
 
 
 function onClick() {
-    console.log("click");
+    console.log(`Opening ${props.url}`);
 
     if (props.url)
         return window.open(props.url, "_blank");
-
-    console.log("MEME");
 }
 </script>
 
@@ -18,3 +16,13 @@ function onClick() {
         <slot />
     </button>
 </template>
+
+
+<style lang="scss" scoped>
+@use "css/partials/_colors.scss" as *;
+
+
+.icon-button {
+    //background-color: $color-primary;
+}
+</style>
