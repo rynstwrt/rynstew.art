@@ -1,4 +1,4 @@
-import { animate } from './lib/anime.js';
+import { animate } from './lib/animejs/anime.js';
 
 
 
