@@ -8,6 +8,7 @@ import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
+import { stagger, splitText, createTimeline } from "animejs";
 
 
 onMounted(() => {
@@ -19,6 +20,35 @@ onMounted(() => {
             options: particlesConfig
         });
     })(tsParticles);
+
+
+    const {words, chars} = splitText("#landing h1", {
+        words: {wrap: "clip"},
+        chars: true,
+        debug: true
+    });
+
+    console.log(words, chars);
+
+    createTimeline({
+        loop: true,
+        defaults: {
+            ease: "inOut(3)",
+            duration: 600
+        },
+        loopDelay: 500
+    })
+
+    .add(words, {
+        y: [$el => +$el.dataset.line % 2 ? '100%' : '-100%', '0%'],
+    }, stagger(125))
+
+    .add(chars, {
+        y: $el => +$el.dataset.line % 2 ? '100%' : '-100%',
+    }, stagger(10, {from: 'random'}))
+
+    .init();
+
 });
 </script>
 
@@ -125,6 +155,119 @@ onMounted(() => {
 
 
 
-    <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
-    <!--<RynFooter />-->
+    <!-- FOOTER -->
+    <RynFooter />
 </template>
+
+
+
+
+<style lang="scss">
+@use "css/partials/colors" as *;
+@use "css/partials/fonts" as *;
+
+#bg-particles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    width: fit-content;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+section {
+    padding: 45px 15px;
+    min-height: 300px;
+}
+
+
+section#landing {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    main {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+
+
+
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            letter-spacing: 4px;
+            color: $color-primary;
+            @include set-font($header-font);
+            text-transform: uppercase;
+            line-height: 3rem;
+            display: block !important;
+
+            span {
+                display: inline !important;
+                background-color: red !important;
+            }
+        }
+
+        p {
+            //letter-spacing: 1px;
+            font-weight: 200;
+            @include set-font($font-source-code-pro);
+        }
+
+        #landing-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            grid-column-gap: 10px;
+        }
+    }
+}
+
+
+section#portfolios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+section#contact {
+    display: none;
+
+    h2 {
+        color: $color-primary;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        @include set-font($header-font);
+    }
+}
+
+</style>

@@ -1,14 +1,14 @@
 <script setup>
-import { animate } from "../js/lib/animejs/anime.js";
+import { animate, splitText, stagger, random } from 'animejs';
 import { onMounted } from "vue";
 
 onMounted(() => {
     animate("#down-chevron-container", {
-        bottom: "+=10px",
+        bottom: "+=7px",
         loop: true,
         alternate: true,
-        easing: "inOutQuad",
-        duration: 700
+        easing: "inQuad",
+        duration: 600
     });
 });
 </script>

@@ -1,17 +1,4 @@
 <script setup>
-// const props = defineProps({
-//     url: {
-//         type: String
-//     },
-//     type: {
-//         type: String,
-//         default: "text"
-//     },
-//     scrollto: {
-//         type: String
-//     }
-// });
-
 const props = defineProps({
     type: { default: "text", type: String },
     url: { type: String },
