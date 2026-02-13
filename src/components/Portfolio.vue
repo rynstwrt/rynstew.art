@@ -73,7 +73,7 @@ onMounted(() => {
 
 <!--<style lang="scss">-->
 <style lang="scss" scoped>
-@use "../css/partials/_colors.scss" as *;
+//@use "../css/partials/_colors.scss" as *;
 
 //$border-radius: 5px;
 #portfolio {
@@ -155,10 +155,4 @@ onMounted(() => {
     }
 }
 
-</style>
-
-<style lang="scss" scoped>
-//#tech-portfolio {
-//    background-color: aquamarine;
-//}
 </style>

@@ -9,8 +9,6 @@
 
 
 <style lang="scss" scoped>
-@use "../css/partials/_colors.scss" as *;
-
 footer {
     background-color: $color-surface;
     padding: 10px 15px;

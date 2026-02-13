@@ -31,8 +31,6 @@ function onClick() {
 
 
 <style lang="scss" scoped>
-@use "../css/partials/_colors.scss" as *;
-
 .ryn-btn {
     border-radius: 5px;
     background-color: transparent;

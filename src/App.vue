@@ -8,10 +8,10 @@ import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
-import { stagger, splitText, createTimeline } from "animejs";
+import { waapi, stagger, splitText, createTimeline, animate } from "animejs";
 
 
-onMounted(() => {
+function loadBackgroundParticles() {
     (async engine => {
         await loadSlim(engine);
 
@@ -20,35 +20,107 @@ onMounted(() => {
             options: particlesConfig
         });
     })(tsParticles);
+}
 
 
-    const {words, chars} = splitText("#landing h1", {
-        words: {wrap: "clip"},
-        chars: true,
-        debug: true
+function createNameAnimation() {
+    const { words, chars } = splitText("#landing h1", {
+        // words: { wrap: 'clip' },
+        // chars: { wrap: 'clip' }
+        words: true,
+        chars: true
     });
 
-    console.log(words, chars);
 
     createTimeline({
-        loop: true,
         defaults: {
-            ease: "inOut(3)",
-            duration: 600
+            duration: 600,
+            // ease: "inOutQuad"
+            ease: 'inOut', // ease applied between each keyframes if no ease defined
+            // playbackEase: 'ouIn(5)', // ease applied accross all keyframes
+            // playbackEase: "inCirc"
         },
-        loopDelay: 500
+        delay: 150,
     })
 
     .add(words, {
-        y: [$el => +$el.dataset.line % 2 ? '100%' : '-100%', '0%'],
-    }, stagger(125))
+        y: "-=0.3lh",
+        ease: 'outCubic'
+    }, stagger(100))
 
     .add(chars, {
-        y: $el => +$el.dataset.line % 2 ? '100%' : '-100%',
-    }, stagger(10, {from: 'random'}))
+        duration: 650,
 
-    .init();
+        scale: [
+            { to: 1.123, ease: "in" },
+            { to: 1, ease: "out" }
+        ],
 
+        rotateX: {
+            to: "-1turn",
+            ease: "inOutSine",
+            delay: stagger(35),
+        }
+    }, 0)
+
+    // .add(words, {
+    //     y: 0,
+    //     duration: 200,
+    // })
+
+    .add(words, {
+        y: 0,
+        ease: 'outQuad',
+        duration: 400
+    }, stagger(150, { reversed: true }));
+
+
+
+    // const wordAnim = {
+    //     fontSize: "+=4",
+    // };
+    // const charAnim = {
+    //     color: { to: "#FF00FF" },
+    // };
+    // createTimeline({
+    //     loop: true,
+    //     defaults: {
+    //         ease: "inOut(3)",
+    //         // ease: 'out(3)',
+    //         duration: 700,
+    //     },
+    //     // loopDelay: 300,
+    //     alternate: true
+    // })
+    // // .add(words, wordAnim, 0)
+    // // .add(chars, charAnim, 0)
+    // // .init();
+
+    // .add(words, {
+    //     y: [$el => +$el.dataset.line % 2 ? '100%' : '-100%', '0%'],
+    // }, stagger(125))
+    // .add(chars, {
+    //     y: $el => +$el.dataset.line % 2 ? '100%' : '-100%',
+    // }, stagger(10, {from: 'random'}))
+
+    // .add(words, {
+    //     color: { to: "#FF0F00" },
+    //     loop: 3,
+    //     alternate: true,
+    // }, stagger(400))
+    // .add(chars, {
+    //     paddingLeft: [0, 10],
+    //     alternate: true,
+    //     loop: 3
+    // }, 0)
+
+    // .init()
+}
+
+
+onMounted(() => {
+    loadBackgroundParticles();
+    createNameAnimation();
 });
 </script>
 
@@ -63,7 +135,9 @@ onMounted(() => {
     <!-- LANDING SECTION -->
     <section id="landing">
         <main>
-            <h1>Ryn Stewart</h1>
+            <h1>Ryn<br />Stewart
+            </h1>
+            <!--<h1><span>Ryn</span>Stewart</h1>-->
             <p id="byline">Artist & Full Stack Developer.</p>
 
 
@@ -162,10 +236,56 @@ onMounted(() => {
 
 
 
+<!--||     GLOBAL STYLES     || -->
 <style lang="scss">
-@use "css/partials/colors" as *;
-@use "css/partials/fonts" as *;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include set-font($content-font);
+    font-weight: normal;
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
 
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    background-color: $color-background;
+    color: $color-light;
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+        background-size: cover;
+        //background: url("../assets/img/banner.jpg") no-repeat fixed center;
+        //background: url("/img/banner.jpg") no-repeat fixed center;
+        mix-blend-mode: overlay;
+        opacity: 0.3;
+        filter: blur(6px) contrast(100%);
+    }
+}
+
+
+#app {
+    height: 100%;
+}
+</style>
+
+
+
+
+<!--||     SCOPED STYLES     || -->
+<style lang="scss" scoped>
 #bg-particles {
     position: fixed;
     top: 0;
@@ -192,6 +312,13 @@ button {
 }
 
 
+p {
+    //letter-spacing: 1px;
+    font-weight: 200;
+    @include set-font($font-source-code-pro);
+}
+
+
 section {
     padding: 45px 15px;
     min-height: 300px;
@@ -213,29 +340,21 @@ section#landing {
         flex-direction: column;
         max-width: 600px;
 
-
-
         h1 {
             font-weight: 300;
-            font-size: 3rem;
             margin-bottom: 5px;
             letter-spacing: 4px;
             color: $color-primary;
             @include set-font($header-font);
+            font-size: 3rem;
             text-transform: uppercase;
-            line-height: 3rem;
-            display: block !important;
+            line-height: 3.2rem;
 
-            span {
-                display: inline !important;
-                background-color: red !important;
+            :deep(span) {
+                font-size: unset;
+                font-weight: unset;
+                line-height: unset;
             }
-        }
-
-        p {
-            //letter-spacing: 1px;
-            font-weight: 200;
-            @include set-font($font-source-code-pro);
         }
 
         #landing-links {
@@ -249,6 +368,7 @@ section#landing {
 }
 
 
+
 section#portfolios {
     display: flex;
     flex-direction: column;
@@ -259,8 +379,6 @@ section#portfolios {
 
 
 section#contact {
-    display: none;
-
     h2 {
         color: $color-primary;
         font-size: 1.5rem;

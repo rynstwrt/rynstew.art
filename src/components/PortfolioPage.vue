@@ -19,10 +19,3 @@ onMounted(() => {
         <slot />
     </div>
 </template>
-
-
-
-<style lang="scss" scoped>
-@use "../css/partials/_colors.scss" as *;
-
-</style>

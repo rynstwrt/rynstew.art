@@ -36,8 +36,6 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
-@use "../css/partials/_colors.scss" as *;
-
 #down-chevron-container {
     width: 45px;
     position: absolute;
