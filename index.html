@@ -4,156 +4,19 @@
     <!-- META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <title>rynstew.art</title>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-
-    <!-- SCRIPTS -->
-    <script type="module" src="js/lib/animejs/anime.js"></script>
-
-    <script type="module" src="js/index.js" defer></script>
-
-    <script src="js/lib/particlesjs/particles.js"></script>
-    <script src="./js/bg-particles.js" defer></script>
-
-    <script type="module" src="./js/ui-manager.js" defer></script>
 </head>
 <body>
-    <div id="app">
-        <!-- BACKGROUND PARTICLES -->
-        <div id="bg-particles"></div>
-
-
-
-        <!-- LANDING SECTION -->
-        <section id="landing">
-            <main>
-                <h1>Ryn Stewart</h1>
-                <p id="byline">Artist & Full Stack Developer.</p>
-
-
-                <div id="landing-links">
-                    <ryn-button type="icon" url="https://github.com/rynstwrt">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                                width="40"
-                                height="40"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1"
-                                stroke-linecap="round"
-                                stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </ryn-button>
-
-
-                    <ryn-button type="icon" url="https://linkedin.com/in/rynstwrt/">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2"
-                                    y="9"
-                                    width="4"
-                                    height="12"></rect>
-                            <circle cx="4"
-                                    cy="4"
-                                    r="2"></circle>
-                        </svg>
-                    </ryn-button>
-
-
-                    <ryn-button type="text"
-                            id="learn-more-btn"
-                            style="width: 100%"
-                            scrollto="section:nth-of-type(2)">
-                        Learn More
-                    </ryn-button>
-                </div>
-            </main>
-
-
-            <down-chevron></down-chevron>
-        </section>
-
-
-
-        <!-- PORTFOLIO SECTION -->
-        <section id="portfolios">
-            <portfolio active="art-portfolio">
-                <portfolio-page id="art-portfolio">
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                    <h3>page 1</h3>
-                </portfolio-page>
-
-                <portfolio-page id="tech-portfolio">
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                    <h3>page 2</h3>
-                </portfolio-page>
-
-                <!--<div id="art-portfolio" class="portfolio-page">-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--    <h3>page 1</h3>-->
-                <!--</div>-->
-
-                <!--<div id="tech-portfolio" class="portfolio-page">-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--    <h3>page 2</h3>-->
-                <!--</div>-->
-            </portfolio>
-        </section>
-
-
-
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can contact me at [...]</p>
-        </section>
-
-
-        <!-- FOOTER -->
-        <ryn-footer></ryn-footer>
-    </div>
+    <div id="app"></div>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>

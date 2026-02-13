@@ -18,6 +18,8 @@
 
 
 <script>
+import { animate } from "../js/lib/animejs/anime.js";
+
 export default {
     mounted: () => {
         animate("#down-chevron-container", {
@@ -34,7 +36,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "css/partials/_colors.scss" as *;
+@use "../css/partials/_colors.scss" as *;
 
 #down-chevron-container {
     width: 45px;

@@ -19,7 +19,7 @@ export default {
     // }
     props: ["active"],
     mounted() {
-        console.log(this.$props.active)
+        // console.log(this.$props.active)
     }
 }
 
@@ -40,6 +40,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../../css/partials/_colors.scss" as *;
+@use "../css/partials/_colors.scss" as *;
 
 </style>

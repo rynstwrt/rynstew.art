@@ -1,3 +1,5 @@
+<script setup>
+</script>
 <template>
     <footer>
         <p id="copyright">©
@@ -9,7 +11,7 @@
 
 
 <style lang="scss" scoped>
-@use "css/partials/_colors.scss" as *;
+@use "../css/partials/_colors.scss" as *;
 
 footer {
     background-color: $color-surface;

@@ -85,7 +85,7 @@ export default {
 
 <!--<style lang="scss">-->
 <style lang="scss" scoped>
-@use "../../css/partials/_colors.scss" as *;
+@use "../css/partials/_colors.scss" as *;
 
 
 //$border-radius: 5px;
