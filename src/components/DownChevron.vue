@@ -1,3 +1,20 @@
+<script setup>
+import { animate } from "../js/lib/animejs/anime.js";
+import { onMounted } from "vue";
+
+onMounted(() => {
+    animate("#down-chevron-container", {
+        bottom: "+=10px",
+        loop: true,
+        alternate: true,
+        easing: "inOutQuad",
+        duration: 700
+    });
+});
+</script>
+
+
+
 <template>
     <div id="down-chevron-container">
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -15,23 +32,6 @@
     </div>
 </template>
 
-
-
-<script>
-import { animate } from "../js/lib/animejs/anime.js";
-
-export default {
-    mounted: () => {
-        animate("#down-chevron-container", {
-            bottom: "+=10px",
-            loop: true,
-            alternate: true,
-            easing: "inOutQuad",
-            duration: 700
-        });
-    }
-}
-</script>
 
 
 

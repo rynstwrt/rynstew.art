@@ -5,30 +5,18 @@
 //     active: { default: "art" }
 // });
 import PortfolioPage from "./PortfolioPage.vue";
-</script>
+import { onMounted } from "vue";
 
 
 
-<script>
-export default {
-    data() {
-        return {
-            active: "art-portfolio"
-        }
-    },
-    mounted() {
-        console.log("mounted portfolio");
-
-        // const portfolioPages = this.$slots.default();
-        // if (!portfolioPages)
-        //     return;
-
-        // console.log(this.$children)
 
 
-    },
+onMounted(() => {
+    console.log("mounted portfolio")
+});
 
-}
+
+
 </script>
 
 
@@ -86,7 +74,6 @@ export default {
 <!--<style lang="scss">-->
 <style lang="scss" scoped>
 @use "../css/partials/_colors.scss" as *;
-
 
 //$border-radius: 5px;
 #portfolio {

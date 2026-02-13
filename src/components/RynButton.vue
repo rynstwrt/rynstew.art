@@ -1,16 +1,22 @@
 <script setup>
+// const props = defineProps({
+//     url: {
+//         type: String
+//     },
+//     type: {
+//         type: String,
+//         default: "text"
+//     },
+//     scrollto: {
+//         type: String
+//     }
+// });
+
 const props = defineProps({
-    url: {
-        type: String
-    },
-    type: {
-        type: String,
-        default: "text"
-    },
-    scrollto: {
-        type: String
-    }
-});
+    type: { default: "text", type: String },
+    url: { type: String },
+    scrollto: { type: String }
+})
 
 const classNames = `ryn-btn ryn-btn-${props.type}`;
 

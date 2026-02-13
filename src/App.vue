@@ -7,7 +7,7 @@ import RynFooter from "./components/RynFooter.vue";
 import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
-import { particlesConfig } from "./js/particles-config.js";
+import particlesConfig from "./assets/json/particles-config.json";
 
 
 onMounted(() => {
@@ -125,6 +125,6 @@ onMounted(() => {
 
 
 
-    <!-- FOOTER -->
-    <RynFooter />
+    <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
+    <!--<RynFooter />-->
 </template>
