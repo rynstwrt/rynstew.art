@@ -6,10 +6,14 @@ import LinkedInIcon from "../assets/icon/social/linkedin.svg?raw";
 import GitHubIcon from "../assets/icon/social/github.svg?raw";
 import CameraIcon from "../assets/icon/social/camera.svg?raw";
 
-// function onSocialButtonClick(url) {
-//     console.log(url.currentTarget, this)
-// }
+
+const SOCIALS = [
+    { text: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/rynstwrt' },
+    { text: 'GitHub', icon: GitHubIcon, url: 'https://github.com/rynstwrt' },
+    { text: 'Unsplash', icon: CameraIcon, url: 'https://unsplash.com/rynstwrt' }
+];
 </script>
+
 
 
 <template>
@@ -20,20 +24,11 @@ import CameraIcon from "../assets/icon/social/camera.svg?raw";
             <p id="byline">Artist and full-stack developer in Dallas, Texas.</p>
 
             <div id="social-grid">
-                <IconButton text="LinkedIn" :icon=LinkedInIcon />
-                <IconButton text="GitHub" :icon=GitHubIcon />
-                <IconButton text="Unsplash" :icon=CameraIcon />
                 <IconButton
-                    v-for="social in [
-                        { text: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/rynstwrt' }
-                    ]"
+                    v-for="social in SOCIALS"
                     :text="social.text"
-                    :icon="social.icon"
+                    :icon='social.icon.replace(/(?=.*?)>/s, ` preserveAspectRatio="none">`)'
                     :url="social.url" />
-                    <!--@click="onSocialButtonClick" />-->
-                    <!--v-bind="{ url: social.url ? social.url : null }" />-->
-                    <!--:url=getSocialURL(social) />-->
-                    <!--v-bind="getSocialURL"-->
             </div>
         </main>
 
@@ -75,9 +70,7 @@ section#landing {
             }
         }
 
-        #byline {
-            //margin-top: 0;
-        }
+        #byline { }
 
         #social-grid {
             display: grid;

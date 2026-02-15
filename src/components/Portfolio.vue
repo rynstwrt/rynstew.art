@@ -4,16 +4,8 @@
 // const props = defineProps({
 //     active: { default: "art" }
 // });
-import PortfolioPage from "./PortfolioPage.vue";
-import { onMounted } from "vue";
-
-
-
-
-
-onMounted(() => {
-    console.log("mounted portfolio")
-});
+// import PortfolioPage from "./PortfolioPage.vue";
+// import { onMounted } from "vue";
 
 
 

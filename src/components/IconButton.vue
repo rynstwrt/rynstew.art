@@ -5,23 +5,14 @@ const props = defineProps([
     "url"
 ]);
 
-// function onButtonClick(event) {
-//     const btnEl = event.target;
-//     console.log(props.url)
-// }
-
-function onButtonClick(url) {
-    console.log(url.currentTarget)
-}
+const openURL = url => window.open(url, "_blank");
 </script>
 
 
 
 <template>
-    <!--<button @click="() => onButtonClick(props.url)">-->
-    <!--<button>-->
-    <button @click=onButtonClick>
-        <span class="social-icon" v-html="icon"></span>
+    <button @click="props.url && openURL(props.url)">
+        <span class="social-icon" v-html="props.icon"></span>
         <span class="social-text">{{ props.text }}</span>
     </button>
 </template>
@@ -51,7 +42,8 @@ function onButtonClick(url) {
                 justify-content: center;
                 align-items: center;
                 width: 25px;
-                height: 50px;
+                height: 25px;
+                //height: 50px;
                 margin-right: 5px;
 
 
