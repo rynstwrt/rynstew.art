@@ -114,14 +114,6 @@ onMounted(() => {
         </Portfolio>
     </section>
 
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact me at [...]</p>
-    </section>
-
-
     <!-- FOOTER -->
     <RynFooter />
 </template>
@@ -197,18 +189,6 @@ a {
 }
 
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 0.9rem;
-    width: fit-content;
-    cursor: pointer;
-    text-align: center;
-}
-
-
 p {
     //letter-spacing: 1px;
     font-weight: 200;
@@ -227,18 +207,6 @@ section#portfolios {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-
-
-section#contact {
-    h2 {
-        color: $color-primary;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        @include set-font($header-font);
-    }
 }
 
 </style>

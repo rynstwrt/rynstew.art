@@ -11,7 +11,7 @@
 <style lang="scss" scoped>
 footer {
     background-color: $color-surface;
-    padding: 10px 15px;
+    padding: 7px 15px;
 
     p {
         font-weight: 300;

@@ -5,13 +5,20 @@ import IconButton from "../components/IconButton.vue";
 import LinkedInIcon from "../assets/icon/social/linkedin.svg?raw";
 import GitHubIcon from "../assets/icon/social/github.svg?raw";
 import CameraIcon from "../assets/icon/social/camera.svg?raw";
-
+import InstagramIcon from "../assets/icon/social/instagram.svg?raw";
+import ResumeIcon from "../assets/icon/social/resume.svg?raw";
 
 const SOCIALS = [
-    { text: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/rynstwrt' },
     { text: 'GitHub', icon: GitHubIcon, url: 'https://github.com/rynstwrt' },
-    { text: 'Unsplash', icon: CameraIcon, url: 'https://unsplash.com/rynstwrt' }
+    { text: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/rynstwrt' },
+    { text: 'Instagram', icon: InstagramIcon, url: 'https://unsplash.com/rynstwrt' },
+    { text: 'Unsplash', icon: CameraIcon, url: 'https://instagram.com/rynstwrt' }
 ];
+
+
+function onC() {
+    window.open('/RynStewartResume.pdf');
+}
 </script>
 
 
@@ -29,6 +36,16 @@ const SOCIALS = [
                     :text="social.text"
                     :icon='social.icon.replace(/(?=.*?)>/s, ` preserveAspectRatio="none">`)'
                     :url="social.url" />
+
+                <IconButton
+                    id="resume-btn"
+                    text="View Resume"
+                    :icon=ResumeIcon
+                    :center="true"
+                    @click="onC"
+                />
+                <!-- @click="() => window.open('/public/img/banner.jpg')" -->
+
             </div>
         </main>
 
@@ -74,10 +91,21 @@ section#landing {
 
         #social-grid {
             display: grid;
-            grid-column-gap: 7px;
             grid-template-columns: repeat(3, 1fr);
-            place-self: center;
+            grid-auto-rows: auto;
+            grid-gap: 8px;
             margin-top: 30px;
+
+            #resume-btn {
+                grid-column: auto / span 2;
+                border-color: $color-primary;
+
+                :deep(.social-text) {
+                    letter-spacing: 0;
+                    //color: $color-primary;
+                    //font-weight: 500;
+                }
+            }
         }
     }
 }
