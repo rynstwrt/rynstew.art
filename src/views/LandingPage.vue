@@ -26,7 +26,7 @@ function onC() {
 <template>
     <section id="landing">
         <main>
-            <h1>Ryn<br />Stewart</h1>
+            <h1>Ryn<br>Stewart</h1>
 
             <p id="byline">Artist and full-stack developer in Dallas, Texas.</p>
 
@@ -44,8 +44,6 @@ function onC() {
                     :center="true"
                     @click="onC"
                 />
-                <!-- @click="() => window.open('/public/img/banner.jpg')" -->
-
             </div>
         </main>
 
@@ -56,6 +54,9 @@ function onC() {
 
 
 <style lang="scss" scoped>
+@use "sass:list";
+@use "sass:meta";
+
 section#landing {
     height: 100%;
     position: relative;
@@ -75,10 +76,15 @@ section#landing {
             margin-bottom: 5px;
             letter-spacing: 4px;
             color: $color-primary;
-            @include set-font($header-font);
             font-size: 3rem;
             text-transform: uppercase;
             line-height: 3.2rem;
+
+            //@extend .victor-mono-font;
+            //@include open-sans-font;
+            //@extend .roboto-font;
+
+
 
             :deep(span) {
                 font-size: unset;

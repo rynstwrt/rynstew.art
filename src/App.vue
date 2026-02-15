@@ -127,8 +127,17 @@ onMounted(() => {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @include set-font($content-font, $weight: 300, $size: 17);
     scroll-behavior: smooth;
+    font-size: 17px;
+}
+
+
+html {
+    @include open-sans-font;
+    //@include source-code-pro-font;
+    //@include victor-mono-font;
+    //@include roboto-font;
+    font-weight: 300;
 }
 
 
