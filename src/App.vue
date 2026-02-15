@@ -82,51 +82,51 @@ onMounted(() => {
     <LandingPage />
 
 
-    <!-- EDUCATION SECTION -->
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <h3>The University of Texas at Dallas</h3>
-            <p>B.A. of Arts, Technology, and Emerging Communications</p>
-        </div>
-    </section>
+    <!--&lt;!&ndash; EDUCATION SECTION &ndash;&gt;-->
+    <!--<section id="education">-->
+    <!--    <div class="section-content">-->
+    <!--        <h2>Education</h2>-->
+    <!--        <h3>The University of Texas at Dallas</h3>-->
+    <!--        <p>B.A. of Arts, Technology, and Emerging Communications</p>-->
+    <!--    </div>-->
+    <!--</section>-->
 
 
-    <!-- DESIGN SECTION -->
-
-
-
-    <section id="websites">
-        <div class="section-content">
-            <h2>Websites</h2>
+    <!--&lt;!&ndash; DESIGN SECTION &ndash;&gt;-->
 
 
 
-            <div class="item">
-                <h3>ilovefoxes.org</h3>
-                <p>A website</p>
-            </div>
-        </div>
-    </section>
+    <!--<section id="websites">-->
+    <!--    <div class="section-content">-->
+    <!--        <h2>Websites</h2>-->
 
 
-    <section id="design">
-        <div class="section-content">
-            <h2>Design</h2>
-        </div>
-    </section>
+
+    <!--        <div class="item">-->
+    <!--            <h3>ilovefoxes.org</h3>-->
+    <!--            <p>A website</p>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
 
 
-    <!-- TECHNOLGOY SECTION -->
-    <section id="technology">
-        <div class="section-content">
-            <h2>Code</h2>
-        </div>
-    </section>
+    <!--<section id="design">-->
+    <!--    <div class="section-content">-->
+    <!--        <h2>Design</h2>-->
+    <!--    </div>-->
+    <!--</section>-->
 
 
-    <!-- FOOTER -->
-    <RynFooter />
+    <!--&lt;!&ndash; TECHNOLGOY SECTION &ndash;&gt;-->
+    <!--<section id="technology">-->
+    <!--    <div class="section-content">-->
+    <!--        <h2>Code</h2>-->
+    <!--    </div>-->
+    <!--</section>-->
+
+
+    <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
+    <!--<RynFooter />-->
 </template>
 
 
