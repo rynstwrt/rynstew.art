@@ -100,9 +100,9 @@ section#landing {
 
         #byline {
             @include source-code-pro-font;
-            font-size: 1.07rem;
+            font-size: 1.05rem;
             font-weight: 300;
-            line-height: 1.125lh;
+            line-height: 1.1lh;
             //letter-spacing: 1px;
             //letter-spacing: 2px;
             //margin-top: 5px;
@@ -125,6 +125,10 @@ section#landing {
             #resume-btn {
                 grid-column: auto / span 2;
                 border-color: $color-primary;
+                //background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 :deep(.social-text) {
                     //color: $color-primary;

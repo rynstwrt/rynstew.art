@@ -32,7 +32,7 @@ button {
     padding: 5px 7px;
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity .1s ease-out;
+    transition: opacity .05s ease-in;
     display: flex;
     align-items: center;
     //font-weight: 200;
