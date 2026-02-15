@@ -1,14 +1,12 @@
 <script setup>
-import RynButton from "./components/RynButton.vue";
 import Portfolio from "./components/Portfolio.vue";
 import PortfolioPage from "./components/PortfolioPage.vue";
-import DownChevron from "./components/DownChevron.vue";
 import RynFooter from "./components/RynFooter.vue";
 import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
-import { waapi, stagger, splitText, createTimeline, animate } from "animejs";
+import { stagger, splitText, createTimeline, animate } from "animejs";
 import LandingPage from "./views/LandingPage.vue";
 
 
@@ -171,6 +169,12 @@ body {
 
 #app {
     height: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 </style>
 

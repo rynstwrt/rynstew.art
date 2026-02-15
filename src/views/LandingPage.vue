@@ -1,93 +1,41 @@
 <script setup>
-// import RynButton from "../components/RynButton.vue";
 import DownChevron from "../components/DownChevron.vue";
-import Icon from "../components/Icon.vue";
-// import InfoGridEntry from "../components/InfoGridEntry.vue";
+import IconButton from "../components/IconButton.vue";
 
+import LinkedInIcon from "../assets/icon/social/linkedin.svg?raw";
+import GitHubIcon from "../assets/icon/social/github.svg?raw";
+import CameraIcon from "../assets/icon/social/camera.svg?raw";
 
-const landingLinks = [
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-    { name: "GitHub", url: "https://github.com/rynstwrt", icon: "github.svg" },
-];
-
+// function onSocialButtonClick(url) {
+//     console.log(url.currentTarget, this)
+// }
 </script>
 
 
-
 <template>
-    <!-- LANDING SECTION -->
     <section id="landing">
         <main>
             <h1>Ryn<br />Stewart</h1>
-            <!--<h1><span>Ryn</span>Stewart</h1>-->
-            <p id="byline">Artist & Full Stack Developer.</p>
 
+            <p id="byline">Artist and full-stack developer in Dallas, Texas.</p>
 
-
-            <div id="info-grid">
-                <a :href=linkData.url class="info-grid-entry" v-for="linkData of landingLinks">
-                    <Icon :name=linkData.icon />
-                    <p>{{ linkData.name }}</p>
-                </a>
+            <div id="social-grid">
+                <IconButton text="LinkedIn" :icon=LinkedInIcon />
+                <IconButton text="GitHub" :icon=GitHubIcon />
+                <IconButton text="Unsplash" :icon=CameraIcon />
+                <IconButton
+                    v-for="social in [
+                        { text: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/rynstwrt' }
+                    ]"
+                    :text="social.text"
+                    :icon="social.icon"
+                    :url="social.url" />
+                    <!--@click="onSocialButtonClick" />-->
+                    <!--v-bind="{ url: social.url ? social.url : null }" />-->
+                    <!--:url=getSocialURL(social) />-->
+                    <!--v-bind="getSocialURL"-->
             </div>
-
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-            <!--    <InfoGridEntry-->
-            <!--        label="GitHub"-->
-            <!--        iconUrl="@/assets/icon/social/github.svg" />-->
-
-
-
-                <!--<InfoGridEntry>-->
-                    <!--<p></p>-->
-                <!--</InfoGridEntry>-->
-
-            <!--    <InfoGridEntry>-->
-            <!--        <p>22222</p>-->
-            <!--    </InfoGridEntry>-->
-
-            <!--    <InfoGridEntry>-->
-            <!--        <p>333333</p>-->
-            <!--    </InfoGridEntry>-->
-
-            <!--    <InfoGridEntry>-->
-            <!--        <p>11111</p>-->
-            <!--    </InfoGridEntry>-->
-
-            <!--    <InfoGridEntry>-->
-            <!--        <p>22222</p>-->
-            <!--    </InfoGridEntry>-->
-
-            <!--    <InfoGridEntry>-->
-            <!--        <p>333333</p>-->
-            <!--    </InfoGridEntry>-->
-            <!--</div>-->
         </main>
-
 
         <DownChevron />
     </section>
@@ -127,28 +75,16 @@ section#landing {
             }
         }
 
-        #info-grid {
+        #byline {
+            //margin-top: 0;
+        }
+
+        #social-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-
-            a.info-grid-entry {
-                display: flex;
-                align-items: center;
-                color: inherit;
-                text-decoration: inherit;
-                border: 1px solid green;
-
-                svg {
-                    //height: 10px;
-                    //width: 10px;
-                    max-width: 25px;
-                }
-
-                p {
-
-                }
-            }
+            grid-column-gap: 7px;
+            grid-template-columns: repeat(3, 1fr);
+            place-self: center;
+            margin-top: 30px;
         }
     }
 }
