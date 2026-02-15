@@ -1,12 +1,10 @@
 <script setup>
-import Portfolio from "./components/Portfolio.vue";
-import PortfolioPage from "./components/PortfolioPage.vue";
 import RynFooter from "./components/RynFooter.vue";
 import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
-import { stagger, splitText, createTimeline, animate } from "animejs";
+import { createTimeline, splitText, stagger } from "animejs";
 import LandingPage from "./views/LandingPage.vue";
 
 
@@ -86,46 +84,46 @@ onMounted(() => {
 
     <!-- EDUCATION SECTION -->
     <section id="education">
-        <h2>Education</h2>
-        <h3>The University of Texas at Dallas</h3>
-        <p>B.A. of Arts, Technology, and Emerging Communications</p>
+        <div class="section-content">
+            <h2>Education</h2>
+            <h3>The University of Texas at Dallas</h3>
+            <p>B.A. of Arts, Technology, and Emerging Communications</p>
+        </div>
     </section>
+
+
+    <!-- DESIGN SECTION -->
+
+
+
+    <section id="websites">
+        <div class="section-content">
+            <h2>Websites</h2>
+
+
+
+            <div class="item">
+                <h3>ilovefoxes.org</h3>
+                <p>A website</p>
+            </div>
+        </div>
+    </section>
+
 
     <section id="design">
-        <h2>Design</h2>
+        <div class="section-content">
+            <h2>Design</h2>
+        </div>
     </section>
 
+
+    <!-- TECHNOLGOY SECTION -->
     <section id="technology">
-        <h2>Technology</h2>
+        <div class="section-content">
+            <h2>Code</h2>
+        </div>
     </section>
 
-
-    <!-- PORTFOLIO SECTION -->
-    <!--<section id="portfolios">-->
-    <!--    <Portfolio active="art-portfolio">-->
-    <!--        <PortfolioPage id="art-portfolio">-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--            <h3>page 1</h3>-->
-    <!--        </PortfolioPage>-->
-
-    <!--        <PortfolioPage id="tech-portfolio">-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--            <h3>page 2</h3>-->
-    <!--        </PortfolioPage>-->
-    <!--    </Portfolio>-->
-    <!--</section>-->
 
     <!-- FOOTER -->
     <RynFooter />
@@ -146,9 +144,6 @@ onMounted(() => {
     //font-size: 14px;
     font-size: 16px;
     font-weight: normal;
-
-    //font-size: 17px;
-    //font-weight: 300;
 }
 
 
@@ -160,22 +155,6 @@ html, body, #app {
 body {
     background-color: $color-background;
     color: $color-light;
-
-    //&::after {
-    //    content: "";
-    //    position: absolute;
-    //    top: 0;
-    //    right: 0;
-    //    bottom: 0;
-    //    left: 0;
-    //    z-index: -2;
-    //    background-size: cover;
-    //    background: url("./assets/img/banner.jpg") no-repeat fixed center;
-    //    mix-blend-mode: overlay;
-    //    opacity: 0.4;
-    //    filter: blur(6px) contrast(100%);
-    //    //overflow: hidden;
-    //}
 }
 
 
@@ -225,24 +204,40 @@ a {
 }
 
 
-//p {
-    //letter-spacing: 1px;
-    //@include source-code-pro-font;
-    //font-weight: 900;
-//}
-
-
 section {
     padding: 45px 15px;
-    min-height: 300px;
 }
 
 
-section#portfolios {
+section:not(#landing) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    //flex-direction: column;
+    //justify-content: center;
+    place-self: center;
 
+    .section-content {
+        background-color: $color-surface;
+        //width: fit-content;
+        width: 600px;
+        padding: 15px;
+        //place-self: center;
+
+
+        h2 {
+            color: $color-primary;
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        p {
+            font-weight: 100;
+            color: $color-light-2;
+        }
+    }
+}
 </style>
