@@ -41,12 +41,10 @@ function createNameAnimation() {
         },
         delay: 150,
     })
-
     .add(words, {
         y: "-=0.3lh",
         ease: 'outCubic'
     }, stagger(100))
-
     .add(chars, {
         duration: 650,
 
@@ -61,7 +59,6 @@ function createNameAnimation() {
             delay: stagger(35),
         }
     }, 0)
-
     .add(words, {
         y: 0,
         ease: 'outQuad',
@@ -87,32 +84,48 @@ onMounted(() => {
     <LandingPage />
 
 
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolios">
-        <Portfolio active="art-portfolio">
-            <PortfolioPage id="art-portfolio">
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-                <h3>page 1</h3>
-            </PortfolioPage>
-
-            <PortfolioPage id="tech-portfolio">
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-                <h3>page 2</h3>
-            </PortfolioPage>
-        </Portfolio>
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+        <h2>Education</h2>
+        <h3>The University of Texas at Dallas</h3>
+        <p>B.A. of Arts, Technology, and Emerging Communications</p>
     </section>
+
+    <section id="design">
+        <h2>Design</h2>
+    </section>
+
+    <section id="technology">
+        <h2>Technology</h2>
+    </section>
+
+
+    <!-- PORTFOLIO SECTION -->
+    <!--<section id="portfolios">-->
+    <!--    <Portfolio active="art-portfolio">-->
+    <!--        <PortfolioPage id="art-portfolio">-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--            <h3>page 1</h3>-->
+    <!--        </PortfolioPage>-->
+
+    <!--        <PortfolioPage id="tech-portfolio">-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--            <h3>page 2</h3>-->
+    <!--        </PortfolioPage>-->
+    <!--    </Portfolio>-->
+    <!--</section>-->
 
     <!-- FOOTER -->
     <RynFooter />
@@ -148,21 +161,21 @@ body {
     background-color: $color-background;
     color: $color-light;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -2;
-        background-size: cover;
-        background: url("./assets/img/banner.jpg") no-repeat fixed center;
-        mix-blend-mode: overlay;
-        opacity: 0.4;
-        filter: blur(6px) contrast(100%);
-        //overflow: hidden;
-    }
+    //&::after {
+    //    content: "";
+    //    position: absolute;
+    //    top: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    left: 0;
+    //    z-index: -2;
+    //    background-size: cover;
+    //    background: url("./assets/img/banner.jpg") no-repeat fixed center;
+    //    mix-blend-mode: overlay;
+    //    opacity: 0.4;
+    //    filter: blur(6px) contrast(100%);
+    //    //overflow: hidden;
+    //}
 }
 
 
@@ -185,10 +198,30 @@ a {
     bottom: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.08;
+    //opacity: 0.08;
+    opacity: .75;
     pointer-events: none;
     width: 100%;
     height: 100%;
+    mix-blend-mode: overlay;
+    //background-blend-mode: overlay;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+        background-size: cover;
+        background: url("./assets/img/banner.jpg") no-repeat fixed center;
+        //mix-blend-mode: overlay;
+        //background-blend-mode: overlay;
+        opacity: 0.7;
+        filter: blur(6px) contrast(100%);
+        //overflow: hidden;
+    }
 }
 
 
