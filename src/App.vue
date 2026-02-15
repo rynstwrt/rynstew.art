@@ -128,20 +128,18 @@ onMounted(() => {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 17px;
+    @include default-font("content");
+    font-style: normal;
+    //font-size: 14px;
+    font-size: 16px;
+    font-weight: normal;
+
+    //font-size: 17px;
+    //font-weight: 300;
 }
 
 
-html {
-    @include open-sans-font;
-    //@include source-code-pro-font;
-    //@include victor-mono-font;
-    //@include roboto-font;
-    font-weight: 300;
-}
-
-
-html, body {
+html, body, #app {
     height: 100%;
 }
 
@@ -152,24 +150,19 @@ body {
 
     &::after {
         content: "";
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         z-index: -2;
         background-size: cover;
-        //background: url("../assets/img/banner.jpg") no-repeat fixed center;
-        //background: url("/img/banner.jpg") no-repeat fixed center;
+        background: url("./assets/img/banner.jpg") no-repeat fixed center;
         mix-blend-mode: overlay;
-        opacity: 0.3;
+        opacity: 0.15;
         filter: blur(6px) contrast(100%);
+        //overflow: hidden;
     }
-}
-
-
-#app {
-    height: 100%;
 }
 
 
@@ -191,18 +184,18 @@ a {
     bottom: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.15;
     pointer-events: none;
     width: 100%;
     height: 100%;
 }
 
 
-p {
+//p {
     //letter-spacing: 1px;
-    font-weight: 200;
-    @include set-font($font-source-code-pro);
-}
+    //@include source-code-pro-font;
+    //font-weight: 900;
+//}
 
 
 section {

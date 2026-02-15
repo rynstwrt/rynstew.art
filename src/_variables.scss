@@ -1,61 +1,31 @@
-@use "sass:list";
+@use "sass:meta";
+@use "sass:map";
 //@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-// -------  FONTS  ------- //
-@mixin set-font(
-    $font,
-    $size: auto,
-    $weight: auto,
-    $width: normal) {
 
-    //@error $font;
-    font-style: auto;
-    font-optical-sizing: auto;
-    font-family: $font;
-    //font-family: list.nth($font, 1);
-    font-size: $size;
-    font-weight: $weight;
-    font-variation-settings: "wdth" $width;
-}
+$content-font: "open-sans-font";
+//$content-font: "victor-mono-font";
 
-$font-roboto: "Roboto", sans-serif;
-$font-opensans: "Open Sans", sans-serif;
-$font-source-code-pro: "Source Code Pro", monospace;
-$font-victor-mono: "Victor Mono", monospace;
-
-//$header-font1: "Victor Mono", monospace;
-//$header-font2: $font-source-code-pro;
-//$header-font3: $font-opensans;
-//$header-font4: $font-roboto;
-
-$header-font: $font-victor-mono;
-$content-font: $font-opensans;
-
-
-@mixin variable-font-common {
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-}
+//$header-font: "source-code-pro-font";
+$header-font: "roboto-font";
 
 
 @mixin font-common {
     font-optical-sizing: auto;
-    //font-weight: normal;
-    font-style: normal;
+    font-weight: auto;
+    font-style: auto;
 }
 
-
-@mixin open-sans-font {
+@mixin open-sans-font($wdth: 100){
     @include font-common;
     font-family: "Open Sans", sans-serif;
-    font-variation-settings: "wdth" 100;
+    font-variation-settings: "wdth" $wdth;
 }
 
-@mixin roboto-font {
+@mixin roboto-font($wdth: 100) {
     @include font-common;
     font-family: "Roboto", sans-serif;
-    font-variation-settings: "wdth" 100;
+    font-variation-settings: "wdth" $wdth;
 }
 
 @mixin source-code-pro-font {
@@ -66,6 +36,11 @@ $content-font: $font-opensans;
 @mixin victor-mono-font {
     @include font-common;
     font-family: "Victor Mono", monospace;
+}
+
+@mixin default-font($type) {
+    $font: map.get((content: $content-font, header: $header-font), $type);
+    @include meta.apply(meta.get-mixin("#{$font}"));
 }
 
 

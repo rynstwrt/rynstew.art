@@ -26,15 +26,16 @@ const openURL = url => window.open(url, "_blank");
 button {
     background-color: transparent;
     //font-size: inherit;
-    border: 1px solid $color-light;
-    border-radius: 3px;
+    //border: 1px solid $color-light-2;
+    border: 1px solid rgba($color-light-2, 0.75);
+    //border-radius: 2px;
     padding: 5px 7px;
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity .115s ease-out;
+    transition: opacity .1s ease-out;
     display: flex;
     align-items: center;
-    font-weight: 400;
+    //font-weight: 200;
 
     &.center {
         justify-content: center;
@@ -42,30 +43,34 @@ button {
     }
 
     :deep(span.social-icon) {
-        //float: left;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
 
         width: 25px;
-        aspect-ratio: 1;
+        height: 25px;
+        //aspect-ratio: 1;
         margin-right: 5px;
 
         svg {
             color: $color-primary;
             height: 100%;
             width: auto;
+            padding: 2px;
         }
     }
 
     :deep(span.social-text) {
         color: $color-light;
-        //font-size: inherit;
+        font-weight: 200;
+        //font-size: 0.85rem;
         font-size: 0.9rem;
+        letter-spacing: 1px;
     }
 
     &:hover {
         opacity: 1;
+        //border-color: $color-light-2;
     }
 }
 </style>
