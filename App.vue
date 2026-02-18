@@ -194,7 +194,7 @@ a {
         left: 0;
         z-index: -2;
         background-size: cover;
-        background: url("./assets/img/banner.jpg") no-repeat fixed center;
+        background: url("assets/img/banner.jpg") no-repeat fixed center;
         //mix-blend-mode: overlay;
         //background-blend-mode: overlay;
         opacity: 0.7;

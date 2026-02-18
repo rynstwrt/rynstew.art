@@ -7,13 +7,13 @@ import svgLoader from "vite-svg-loader";
 export default defineConfig({
     plugins: [
         vue(),
-        // vueDevTools(),
+        // vueDevToodls(),
         svgLoader()
     ],
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@use "/src/_variables.scss" as *;`,
+                additionalData: `@use "/_variables.scss" as *;`,
                 api: 'modern',
             },
         },
