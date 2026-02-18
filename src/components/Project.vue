@@ -1,4 +1,7 @@
 <script setup>
+import LinkIcon from "../assets/icon/link.svg";
+import GitHubIcon from "../assets/icon/github.svg";
+
 const props = defineProps([
     "title",
     "desc",
@@ -22,9 +25,13 @@ const props = defineProps([
             <p>{{ props.desc }}</p>
 
             <div class="links">
-                <a :href="props.url" target="_blank">{{ props.url }}</a>
-                •
-                <a :href="props.repo" target="_blank">GitHub</a>
+                <a v-if="props.url" :href="props.url" target="_blank">
+                    <LinkIcon />
+                </a>
+                <!--•-->
+                <a v-if="props.repo" :href="props.repo" target="_blank">
+                    <GitHubIcon />
+                </a>
             </div>
         </div>
     </div>
@@ -89,15 +96,22 @@ const props = defineProps([
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-top: 5px;
+            margin-top: 10px;
 
             a {
-                color: $color-primary;
+                color: $color-light-2;
                 font-weight: 100;
                 letter-spacing: 1px;
+                transition: color .1s ease-out;
 
                 &:hover {
                     text-decoration: underline;
+                    color: $color-primary;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
