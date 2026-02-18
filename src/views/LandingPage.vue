@@ -20,7 +20,7 @@ const SOCIALS = [
 
 
 function openResume() {
-    window.open('/resume.pdf', '_blank');
+    window.open('/RynStewartResume.pdf', '_blank');
 }
 </script>
 
