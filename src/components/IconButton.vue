@@ -16,7 +16,7 @@ const openURL = url => window.open(url, "_blank");
         :class="() => 'social-btn' + props.center==='true' ? ' center' : ''"
         @click="props.url && openURL(props.url)" >
         <span class="social-icon" v-if="props.icon" v-html="props.icon"></span>
-        <span class="social-text">{{ props.text }}</span>
+        <span class="social-text" v-if="props.text">{{ props.text }}</span>
     </button>
 </template>
 
@@ -50,7 +50,7 @@ button {
         width: 25px;
         height: 25px;
         //aspect-ratio: 1;
-        margin-right: 5px;
+        //margin-right: 5px;
 
         svg {
             color: $color-primary;
@@ -66,6 +66,7 @@ button {
         //font-size: 0.85rem;
         font-size: 0.9rem;
         letter-spacing: 1px;
+        margin-left: 5px;
     }
 
     &:hover {

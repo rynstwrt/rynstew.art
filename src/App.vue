@@ -1,11 +1,13 @@
 <script setup>
-import RynFooter from "./components/RynFooter.vue";
+import "./App.scss";
 import { onMounted } from "vue";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
 import { createTimeline, splitText, stagger } from "animejs";
 import LandingPage from "./views/LandingPage.vue";
+import RynFooter from "./components/RynFooter.vue";
+import Website from "./components/Website.vue";
 
 
 function loadBackgroundParticles() {
@@ -22,8 +24,6 @@ function loadBackgroundParticles() {
 
 function createNameAnimation() {
     const { words, chars } = splitText("#landing h1", {
-        // words: { wrap: 'clip' },
-        // chars: { wrap: 'clip' }
         words: true,
         chars: true
     });
@@ -32,10 +32,7 @@ function createNameAnimation() {
     createTimeline({
         defaults: {
             duration: 600,
-            // ease: "inOutQuad"
             ease: 'inOut', // ease applied between each keyframes if no ease defined
-            // playbackEase: 'ouIn(5)', // ease applied accross all keyframes
-            // playbackEase: "inCirc"
         },
         delay: 150,
     })
@@ -69,6 +66,33 @@ onMounted(() => {
     loadBackgroundParticles();
     createNameAnimation();
 });
+
+
+
+// let allPortfolioAssets = Object.values(import.meta.glob("./assets/portfolio/**/*.*", {
+//     eager: true,
+//     query: "?url",
+//     import: "default"
+// }));
+
+// allPortfolioAssets = allPortfolioAssets.map(src => src.replaceAll("/src/assets/portfolio/", ""))
+// console.log(allPortfolioAssets)
+
+
+const allWebsiteAssets = Object.values(import.meta.glob("/src/assets/portfolio/websites/**/*.*", {
+    eager: true,
+    query: "?url",
+    import: "default"
+}));
+
+function getWebsiteImagesFromDir(dir) {
+    return allWebsiteAssets.filter(url => url.startsWith("/src/assets/portfolio/websites/" + dir));
+}
+
+
+const chordProgImages = getWebsiteImagesFromDir("ChordProgressionGenerator");
+console.log(chordProgImages);
+
 </script>
 
 
@@ -80,6 +104,39 @@ onMounted(() => {
 
     <!-- LANDING PAGE SECTION -->
     <LandingPage />
+
+
+    <section id="websites">
+        <h2>Websites</h2>
+
+        <Website
+            title="Chord Progression Generator"
+            desc="Generate chord progressions."
+            url="https://quickbin.app"
+            repo="https://github.com/rynstwrt/quickbin.app"
+            :imageURLs="getWebsiteImagesFromDir('ChordProgressionGenerator')"
+        />
+
+        <Website
+            title="Quickbin"
+            desc="Like Pastebin, but quicker. Saved quickbins are read-only."
+            url="https://quickbin.app"
+            repo="https://github.com/rynstwrt/quickbin.app"
+            :imageURLs="getWebsiteImagesFromDir('Quickbin')"
+        />
+
+        <Website
+            title="offtheblock.lol"
+            desc="A website design for a Minecraft server."
+            url="https://offtheblock.lol"
+            repo="https://github.com/rynstwrt/offtheblock.lol"
+            :imageURLs="getWebsiteImagesFromDir('OffTheBlock')"
+        />
+
+
+    </section>
+
+
 
 
     <!--&lt;!&ndash; EDUCATION SECTION &ndash;&gt;-->
@@ -96,18 +153,7 @@ onMounted(() => {
 
 
 
-    <!--<section id="websites">-->
-    <!--    <div class="section-content">-->
-    <!--        <h2>Websites</h2>-->
 
-
-
-    <!--        <div class="item">-->
-    <!--            <h3>ilovefoxes.org</h3>-->
-    <!--            <p>A website</p>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
 
 
     <!--<section id="design">-->
@@ -125,14 +171,12 @@ onMounted(() => {
     <!--</section>-->
 
 
-    <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
-    <!--<RynFooter />-->
+    <!-- FOOTER -->
+    <RynFooter />
 </template>
 
 
 
-
-<!--||     GLOBAL STYLES     || -->
 <style lang="scss">
 * {
     margin: 0;
@@ -151,6 +195,15 @@ html, body, #app {
     height: 100%;
 }
 
+#app {
+    width: 100%;
+    height: 100%;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+}
+
 
 body {
     background-color: $color-background;
@@ -165,79 +218,8 @@ a {
 </style>
 
 
-
-
-<!--||     SCOPED STYLES     || -->
 <style lang="scss" scoped>
-#bg-particles {
-    //position: fixed;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    //opacity: 0.08;
-    opacity: .75;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: overlay;
-    //background-blend-mode: overlay;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -2;
-        background-size: cover;
-        background: url("assets/img/banner.jpg") no-repeat fixed center;
-        //mix-blend-mode: overlay;
-        //background-blend-mode: overlay;
-        opacity: 0.7;
-        filter: blur(6px) contrast(100%);
-        //overflow: hidden;
-    }
-}
-
-
-section {
-    padding: 45px 15px;
-}
-
-
-section:not(#landing) {
-    display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    place-self: center;
-
-    .section-content {
-        background-color: $color-surface;
-        //width: fit-content;
-        width: 600px;
-        padding: 15px;
-        //place-self: center;
-
-
-        h2 {
-            color: $color-primary;
-            font-size: 1.5rem;
-            font-weight: 100;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
-        p {
-            font-weight: 100;
-            color: $color-light-2;
-        }
-    }
+.website {
+    margin: 20px 0;
 }
 </style>
