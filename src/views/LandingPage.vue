@@ -19,8 +19,8 @@ const SOCIALS = [
 ];
 
 
-function onC() {
-    window.open('/RynStewartResume.pdf');
+function openResume() {
+    window.open('/resume.pdf', '_blank');
 }
 </script>
 
@@ -45,7 +45,7 @@ function onC() {
                     text="View Resume"
                     :icon=ResumeIcon
                     :center="true"
-                    @click="onC"
+                    @click="openResume"
                 />
             </div>
         </main>
