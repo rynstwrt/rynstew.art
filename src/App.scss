@@ -33,20 +33,23 @@
 
 
 section:not(#landing) {
+    margin: 50px auto;
     //padding: 45px 15px;
     max-width: 550px;
     //background-color: red;
     padding: 0 10px;
-    margin: 0 auto;
+    //margin: 0 auto;
+
+    h2 {
+        font-size: 1.7rem;
+    }
 }
 
 
 section#websites {
     //padding: 0 20px;
 
-    h2 {
-        font-size: 1.7rem;
-    }
+
 
 
 }

@@ -68,17 +68,6 @@ onMounted(() => {
 });
 
 
-
-// let allPortfolioAssets = Object.values(import.meta.glob("./assets/portfolio/**/*.*", {
-//     eager: true,
-//     query: "?url",
-//     import: "default"
-// }));
-
-// allPortfolioAssets = allPortfolioAssets.map(src => src.replaceAll("/src/assets/portfolio/", ""))
-// console.log(allPortfolioAssets)
-
-
 const allWebsiteAssets = Object.values(import.meta.glob("/src/assets/portfolio/websites/**/*.*", {
     eager: true,
     query: "?url",
@@ -106,69 +95,71 @@ console.log(chordProgImages);
     <LandingPage />
 
 
-    <section id="websites">
-        <h2>Websites</h2>
+    <section id="code">
+        <h2>Code</h2>
 
         <Website
             title="Chord Progression Generator"
             desc="Generate chord progressions."
             url="https://quickbin.app"
             repo="https://github.com/rynstwrt/quickbin.app"
-            :imageURLs="getWebsiteImagesFromDir('ChordProgressionGenerator')"
-        />
+            image="ChordProgressionGenerator.jpg" />
 
         <Website
             title="Quickbin"
             desc="Like Pastebin, but quicker. Saved quickbins are read-only."
             url="https://quickbin.app"
             repo="https://github.com/rynstwrt/quickbin.app"
-            :imageURLs="getWebsiteImagesFromDir('Quickbin')"
-        />
+            image="Quickbin.png" />
+
+        <Website
+            title="EditorPerRepo"
+            desc="Description"
+            url="https://"
+            repo="https://github.com/rynstewart/EditorPerRepoElectron" />
+
+        <Website
+            title="DomainDissidence"
+            desc="Description"
+            url="https://domaindissidence.online"
+            repo="https://github.com/DomainDissidence" />
+
+        <Website
+            title="PixelblazeDesktop"
+            desc="Description"
+            url=""
+            repo="https://github.com/rynstwrt/Pixelblaze-Desktop" />
+    </section>
+
+
+    <section id="websites">
+        <h2>Web Development</h2>
 
         <Website
             title="offtheblock.lol"
             desc="A website design for a Minecraft server."
             url="https://offtheblock.lol"
             repo="https://github.com/rynstwrt/offtheblock.lol"
-            :imageURLs="getWebsiteImagesFromDir('OffTheBlock')"
-        />
+            image="OffTheBlock.jpg" />
 
+        <Website
+            title="CSS Animation Gallery"
+            desc="Description"
+            url="https://"
+            repo="https://github.com/" />
 
+        <Website
+            title="ilovefoxes.org"
+            desc="Description"
+            url="https://ilovefoxes.org"
+            repo="https://github.com/rynstwrt/ilovefoxes.org" />
     </section>
 
 
 
-
-    <!--&lt;!&ndash; EDUCATION SECTION &ndash;&gt;-->
-    <!--<section id="education">-->
-    <!--    <div class="section-content">-->
-    <!--        <h2>Education</h2>-->
-    <!--        <h3>The University of Texas at Dallas</h3>-->
-    <!--        <p>B.A. of Arts, Technology, and Emerging Communications</p>-->
-    <!--    </div>-->
-    <!--</section>-->
-
-
-    <!--&lt;!&ndash; DESIGN SECTION &ndash;&gt;-->
-
-
-
-
-
-
-    <!--<section id="design">-->
-    <!--    <div class="section-content">-->
-    <!--        <h2>Design</h2>-->
-    <!--    </div>-->
-    <!--</section>-->
-
-
-    <!--&lt;!&ndash; TECHNOLGOY SECTION &ndash;&gt;-->
-    <!--<section id="technology">-->
-    <!--    <div class="section-content">-->
-    <!--        <h2>Code</h2>-->
-    <!--    </div>-->
-    <!--</section>-->
+    <section id="design">
+        <h2>Design</h2>
+    </section>
 
 
     <!-- FOOTER -->
@@ -198,10 +189,6 @@ html, body, #app {
 #app {
     width: 100%;
     height: 100%;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
 }
 
 
