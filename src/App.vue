@@ -7,7 +7,7 @@ import particlesConfig from "./assets/json/particles-config.json";
 import { createTimeline, splitText, stagger } from "animejs";
 import LandingPage from "./views/LandingPage.vue";
 import RynFooter from "./components/RynFooter.vue";
-import Website from "./components/Website.vue";
+import Project from "./components/Project.vue";
 
 
 function loadBackgroundParticles() {
@@ -98,33 +98,33 @@ console.log(chordProgImages);
     <section id="code">
         <h2>Code</h2>
 
-        <Website
+        <Project
             title="Chord Progression Generator"
             desc="Generate chord progressions."
             url="https://quickbin.app"
             repo="https://github.com/rynstwrt/quickbin.app"
             image="ChordProgressionGenerator.jpg" />
 
-        <Website
+        <Project
             title="Quickbin"
             desc="Like Pastebin, but quicker. Saved quickbins are read-only."
             url="https://quickbin.app"
             repo="https://github.com/rynstwrt/quickbin.app"
             image="Quickbin.png" />
 
-        <Website
+        <Project
             title="EditorPerRepo"
             desc="Description"
             url="https://"
             repo="https://github.com/rynstewart/EditorPerRepoElectron" />
 
-        <Website
+        <Project
             title="DomainDissidence"
             desc="Description"
             url="https://domaindissidence.online"
             repo="https://github.com/DomainDissidence" />
 
-        <Website
+        <Project
             title="PixelblazeDesktop"
             desc="Description"
             url=""
@@ -135,20 +135,20 @@ console.log(chordProgImages);
     <section id="websites">
         <h2>Web Development</h2>
 
-        <Website
+        <Project
             title="offtheblock.lol"
             desc="A website design for a Minecraft server."
             url="https://offtheblock.lol"
             repo="https://github.com/rynstwrt/offtheblock.lol"
             image="OffTheBlock.jpg" />
 
-        <Website
+        <Project
             title="CSS Animation Gallery"
             desc="Description"
             url="https://"
             repo="https://github.com/" />
 
-        <Website
+        <Project
             title="ilovefoxes.org"
             desc="Description"
             url="https://ilovefoxes.org"
