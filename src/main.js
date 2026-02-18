@@ -10,7 +10,8 @@ const routes = [
     { path: "/", component: HomePage },
     { path: "/test", redirect: "/RynStewartResume.pdf" },
     { path: "/resume", component: FileRedirectPage, props: { path: "/RynStewartResume.pdf" } },
-    { path: "/portfolio", component: FileRedirectPage, props: { path: "/RynStewartPortfolio.pdf" } }
+    { path: "/portfolio", component: FileRedirectPage, props: { path: "/RynStewartPortfolio.pdf" } },
+    { path: "/**", component: HomePage }
 ];
 
 
