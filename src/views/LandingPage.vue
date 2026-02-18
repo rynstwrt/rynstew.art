@@ -50,6 +50,6 @@ function openResume() {
             </div>
         </main>
 
-        <DownChevron />
+        <!--<DownChevron />-->
     </section>
 </template>
