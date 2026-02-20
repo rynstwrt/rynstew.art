@@ -16,9 +16,11 @@ const props = defineProps(["url", "title"]);
                 useRouter="true" />
         </div>
 
-        <object :data="props.url" type="application/json" width="100%" height="100%">
-            <p>Pdf not found!!!!</p>
-        </object>
+        <div id="pdf-container">
+            <object :data="props.url" type="application/json" width="100%" height="100%">
+                <p>Pdf not found!!!!</p>
+            </object>
+        </div>
     </main>
 </template>
 
@@ -36,10 +38,6 @@ main {
     height: 100%;
     //max-width: 400px;
     padding: 10px;
-
-
-
-
 
     .header {
         display: flex;
@@ -64,9 +62,17 @@ main {
     }
 }
 
-object {
+#pdf-container {
+    //background-color: red;
+    width: 100%;
+    height: 100%;
+
     @media (screen and min-width: 540px) {
         padding: 0 10px;
+    }
+
+    object {
+        //display: none;
     }
 }
 </style>
