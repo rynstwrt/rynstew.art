@@ -32,7 +32,8 @@ const props = defineProps(["showArrow"]);
                     id="portfolio-btn"
                     :icon="ResumeIcon"
                     url="/portfolio"
-                    text="Design Portfolio" />
+                    text="Design Portfolio"
+                    useRouter="true" />
 
                 <IconButton
                     id="resume-btn"
