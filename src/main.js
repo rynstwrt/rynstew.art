@@ -15,13 +15,13 @@ const router = createRouter({
         },
         {
             path: "/resume", component: PDFPage, props: {
-                url: "/RynStewartResume.pdf",
+                url: "./public/RynStewartResume.pdf",
                 title: "Resumé"
             }
         },
         {
             path: "/portfolio", component: PDFPage, props: {
-                url: "/RynStewartPortfolio.pdf",
+                url: "./public/RynStewartPortfolio.pdf",
                 title: "Design Portfolio"
             }
         },
