@@ -26,6 +26,12 @@ const router = createRouter({
             }
         },
         {
+            path: "/port2", component: PDFPage, props: {
+                url: "/RynStewartPortfolio.pdf",
+                title: "Design Portfolio"
+            }
+        },
+        {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
             component: NotFoundPage
