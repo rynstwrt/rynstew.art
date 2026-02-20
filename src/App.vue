@@ -178,6 +178,20 @@ html, body, #app {
 body {
     background-color: $color-background;
     color: $color-light;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        z-index: -2;
+        background: url("./assets/img/banner.jpg") no-repeat fixed center;
+        opacity: 0.3;
+        filter: brightness(30%) contrast(105%);
+    }
 }
 
 

@@ -61,6 +61,7 @@ const props = defineProps([
             font-size: 0.9rem;
             letter-spacing: 1px;
             margin-left: 5px;
+            text-wrap: nowrap;
         }
 
     }
