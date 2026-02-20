@@ -5,7 +5,7 @@ import RynFooter from "../components/RynFooter.vue";
 import { onMounted } from "vue";
 import { createTimeline, splitText, stagger } from "animejs";
 
-const PLACEHOLDER_MODE = false;
+const PLACEHOLDER_MODE = true;
 const PLACEHOLDER_MODE_ALLOWED = ["#bg-particles", "#landing *:not(#down-chevron-container)", "#landing"]
 
 
