@@ -6,6 +6,8 @@ import IconButton from "../components/IconButton.vue";
 import LinkedInIcon from "../assets/icon/linkedin.svg?raw";
 import GitHubIcon from "../assets/icon/github.svg?raw";
 import ResumeIcon from "../assets/icon/resume.svg?raw";
+
+const props = defineProps(["showArrow"]);
 </script>
 
 
@@ -29,17 +31,29 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
                 <IconButton
                     id="portfolio-btn"
                     :icon="ResumeIcon"
-                    url="/RynStewartPortfolio.pdf"
+                    url="/portfolio"
                     text="Design Portfolio" />
 
                 <IconButton
                     id="resume-btn"
                     :icon="ResumeIcon"
-                    url="/RynStewartResume.pdf"
+                    url="/resume"
                     text="Resumé" />
+
+                <!--<IconButton-->
+                <!--    id="portfolio-btn"-->
+                <!--    :icon="ResumeIcon"-->
+                <!--    url="/RynStewartPortfolio.pdf"-->
+                <!--    text="Design Portfolio" />-->
+
+                <!--<IconButton-->
+                <!--    id="resume-btn"-->
+                <!--    :icon="ResumeIcon"-->
+                <!--    url="/RynStewartResume.pdf"-->
+                <!--    text="Resumé" />-->
             </div>
         </main>
 
-        <!--<DownChevron />-->
+        <DownChevron v-if="showArrow==='true'" />
     </section>
 </template>

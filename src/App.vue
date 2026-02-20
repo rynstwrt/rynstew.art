@@ -76,7 +76,7 @@ onMounted(() => {
 
 
     <!-- LANDING PAGE SECTION -->
-    <LandingPage />
+    <LandingPage showArrow="false" />
 
 
     <!--<section id="code">-->
