@@ -6,8 +6,12 @@ import { loadSlim } from "@tsparticles/slim";
 import particlesConfig from "./assets/json/particles-config.json";
 import { createTimeline, splitText, stagger } from "animejs";
 import LandingPage from "./views/LandingPage.vue";
-// import RynFooter from "../components/RynFooter.vue";
-// import Project from "../components/Project.vue";
+import RynFooter from "./components/RynFooter.vue";
+import Project from "./components/Project.vue";
+
+
+const PLACEHOLDER_MODE = true;
+const PLACEHOLDER_MODE_ALLOWED = ["#bg-particles", "#landing *:not(#down-chevron-container)", "#landing"]
 
 
 function loadBackgroundParticles() {
@@ -65,6 +69,12 @@ function createNameAnimation() {
 onMounted(() => {
     loadBackgroundParticles();
     createNameAnimation();
+
+    if (PLACEHOLDER_MODE) {
+        const sel = `#app *:not(${PLACEHOLDER_MODE_ALLOWED.join()})`;
+        document.querySelectorAll(sel)
+                .forEach(el => el.remove());
+    }
 });
 </script>
 
@@ -76,44 +86,44 @@ onMounted(() => {
 
 
     <!-- LANDING PAGE SECTION -->
-    <LandingPage showArrow="false" />
+    <LandingPage showArrow="true" />
 
 
-    <!--<section id="code">-->
-    <!--    <h2>Code</h2>-->
+    <section id="code">
+        <h2>Code</h2>
 
-    <!--    <Project-->
-    <!--        title="Chord Progression Generator"-->
-    <!--        desc="Generate chord progressions."-->
-    <!--        url="https://quickbin.app"-->
-    <!--        repo="https://github.com/rynstwrt/quickbin.app"-->
-    <!--        image="ChordProgressionGenerator.jpg" />-->
+        <Project
+            title="Chord Progression Generator"
+            desc="Generate chord progressions."
+            url="https://quickbin.app"
+            repo="https://github.com/rynstwrt/quickbin.app"
+            image="ChordProgressionGenerator.jpg" />
 
-    <!--    <Project-->
-    <!--        title="Quickbin"-->
-    <!--        desc="Like Pastebin, but quicker. Saved quickbins are read-only."-->
-    <!--        url="https://quickbin.app"-->
-    <!--        repo="https://github.com/rynstwrt/quickbin.app"-->
-    <!--        image="Quickbin.png" />-->
+        <Project
+            title="Quickbin"
+            desc="Like Pastebin, but quicker. Saved quickbins are read-only."
+            url="https://quickbin.app"
+            repo="https://github.com/rynstwrt/quickbin.app"
+            image="Quickbin.png" />
 
-    <!--    <Project-->
-    <!--        title="EditorPerRepo"-->
-    <!--        desc="Description"-->
-    <!--        url="https://"-->
-    <!--        repo="https://github.com/rynstewart/EditorPerRepoElectron" />-->
+        <Project
+            title="EditorPerRepo"
+            desc="Description"
+            url="https://"
+            repo="https://github.com/rynstewart/EditorPerRepoElectron" />
 
-    <!--    <Project-->
-    <!--        title="DomainDissidence"-->
-    <!--        desc="Description"-->
-    <!--        url="https://domaindissidence.online"-->
-    <!--        repo="https://github.com/DomainDissidence" />-->
+        <Project
+            title="DomainDissidence"
+            desc="Description"
+            url="https://domaindissidence.online"
+            repo="https://github.com/DomainDissidence" />
 
-    <!--    <Project-->
-    <!--        title="PixelblazeDesktop"-->
-    <!--        desc="Description"-->
-    <!--        url=""-->
-    <!--        repo="https://github.com/rynstwrt/Pixelblaze-Desktop" />-->
-    <!--</section>-->
+        <Project
+            title="PixelblazeDesktop"
+            desc="Description"
+            url=""
+            repo="https://github.com/rynstwrt/Pixelblaze-Desktop" />
+    </section>
 
 
     <!--<section id="websites">-->
@@ -147,7 +157,7 @@ onMounted(() => {
 
 
     <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
-    <!--<RynFooter />-->
+    <RynFooter />
 </template>
 
 
