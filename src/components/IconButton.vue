@@ -2,19 +2,25 @@
 const props = defineProps([
     "icon",
     "url",
-    "text"
+    "text",
+    "useRouter"
 ]);
 </script>
 
 
 
+
+
 <template>
-    <a :href="props.url" target="_blank" >
+    <a class="icon-btn" :href="props.url" v-if="useRouter!=='true'">
         <div class="icon-container" v-html="props.icon"></div>
         <p v-if="props.text">{{ props.text }}</p>
     </a>
+    <RouterLink class="icon-btn" :to="props.url" v-else>
+        <div class="icon-container" v-html="props.icon"></div>
+        <p v-if="props.text">{{ props.text }}</p>
+    </RouterLink>
 </template>
-
 
 
 <style lang="scss" scoped>
@@ -34,6 +40,13 @@ const props = defineProps([
         padding: 5px 7px;
         //height: 25px;
         //height: fit-content;
+
+        opacity: 0.8;
+        transition: opacity .09s ease-out;
+
+        &:hover {
+            opacity: 1;
+        }
 
 
         .icon-container {

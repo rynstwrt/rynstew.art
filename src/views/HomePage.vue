@@ -1,25 +1,13 @@
 <script setup>
 import "./HomePage.scss";
-import { onMounted } from "vue";
-import { tsParticles } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";
-import particlesConfig from "../assets/json/particles-config.json";
-import { createTimeline, splitText, stagger } from "animejs";
 import LandingPage from "./LandingPage.vue";
-// import RynFooter from "../components/RynFooter.vue";
-// import Project from "../components/Project.vue";
+import RynFooter from "../components/RynFooter.vue";
+import { onMounted } from "vue";
+import { createTimeline, splitText, stagger } from "animejs";
 
+const PLACEHOLDER_MODE = false;
+const PLACEHOLDER_MODE_ALLOWED = ["#bg-particles", "#landing *:not(#down-chevron-container)", "#landing"]
 
-function loadBackgroundParticles() {
-    (async engine => {
-        await loadSlim(engine);
-
-        await engine.load({
-            id: "bg-particles",
-            options: particlesConfig
-        });
-    })(tsParticles);
-}
 
 
 function createNameAnimation() {
@@ -61,22 +49,23 @@ function createNameAnimation() {
     }, stagger(150, { reversed: true }));
 }
 
-
 onMounted(() => {
-    loadBackgroundParticles();
     createNameAnimation();
+
+    if (PLACEHOLDER_MODE) {
+        const sel = `#app *:not(${PLACEHOLDER_MODE_ALLOWED.join()})`;
+        document.querySelectorAll(sel)
+                .forEach(el => el.remove());
+    }
 });
 </script>
 
-
-
 <template>
-    <!-- BACKGROUND PARTICLES -->
-    <div id="bg-particles" ref="bg-particles"></div>
-
-
     <!-- LANDING PAGE SECTION -->
-    <LandingPage />
+    <LandingPage showArrow="true" />
+
+
+    <!--<PDFPage url="/RynStewartResume.pdf" title="asdf" />-->
 
 
     <!--<section id="code">-->
@@ -139,7 +128,19 @@ onMounted(() => {
     <!--        repo="https://github.com/rynstwrt/ilovefoxes.org" />-->
     <!--</section>-->
 
+    <!--
+    Source - https://stackoverflow.com/a/7044015
+    Posted by Batfan, modified by community. See post 'Timeline' for change history
+    Retrieved 2026-02-20, License - CC BY-SA 4.0
+    -->
 
+    <!--<embed src="https://drive.google.com/viewerng/-->
+    <!--viewer?embedded=true&url=https://drive.google.com/file/d/1Cmi0H41IBApo4fqS98U4PKQD_XmzAVc3/view?usp=sharing" width="500" height="375">-->
+
+
+    <!--<pdf-js-vue title="aasdf" pdfUrl="./RynStewartResume.pdf" />-->
+
+    <!--<PDFPage pdfPath="../public/RynStewartResume.pdf" />-->
 
     <!--<section id="design">-->
     <!--    <h2>Design</h2>-->
@@ -147,12 +148,9 @@ onMounted(() => {
 
 
     <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
-    <!--<RynFooter />-->
+    <RynFooter />
 </template>
 
+<style scoped lang="scss">
 
-<style lang="scss" scoped>
-.website {
-    margin: 20px 0;
-}
 </style>

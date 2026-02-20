@@ -55,16 +55,6 @@ section#landing {
                 grid-column-end: 4;
                 grid-row: 2;
             }
-
-
-            a {
-                opacity: 0.8;
-                transition: opacity .09s ease-out;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
         }
     }
 }

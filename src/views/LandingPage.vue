@@ -38,7 +38,14 @@ const props = defineProps(["showArrow"]);
                     id="resume-btn"
                     :icon="ResumeIcon"
                     url="/resume"
-                    text="Resumé" />
+                    text="View Resumé"
+                    useRouter="true" />
+
+                <!--<IconButton-->
+                <!--    id="resume-btn"-->
+                <!--    :icon="ResumeIcon"-->
+                <!--    url="/resume"-->
+                <!--    text="View "-->
 
                 <!--<IconButton-->
                 <!--    id="portfolio-btn"-->
