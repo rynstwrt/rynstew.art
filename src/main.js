@@ -1,10 +1,10 @@
-import "./index.scss";
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./views/HomePage.vue";
 import PDFPage from "./views/PDFPage.vue";
 import NotFoundPage from "./views/NotFoundPage.vue";
+import "./index.scss";
 
 
 const router = createRouter({

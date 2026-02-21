@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "publish": "ssh ryn@216.158.226.252 '/var/www/rynstew.art/serve.sh'"
+        "publish": "ssh ryn@216.158.226.252 '~/publish_rynstew.art.sh'"
     },
     "repository": {
         "type": "git",
