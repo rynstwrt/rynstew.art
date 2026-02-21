@@ -1,7 +1,7 @@
 <script setup>
 import { RouterView } from "vue-router";
-import ThreeDimBackground from "./components/ThreeDimBackground.vue";
-import { ref } from "vue";
+// import ThreeDimBackground from "./components/ThreeDimBackground.vue";
+// import { ref } from "vue";
 // import { TresCanvas, useLoop } from "@tresjs/core";
 import ParticleBackground from "./components/ParticleBackground.vue";
 
