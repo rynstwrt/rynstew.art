@@ -3,7 +3,7 @@ import LandingPage from "../components/LandingSection.vue";
 import { onMounted } from "vue";
 
 const PLACEHOLDER_MODE = true;
-const PLACEHOLDER_MODE_ALLOWED = ["#bg-particles", "#landing *:not(#down-chevron-container)", "#landing"]
+const PLACEHOLDER_MODE_ALLOWED = ["#bg-particles", "#threejs-bg", "#landing *:not(#down-chevron-container)", "#landing"]
 
 
 onMounted(() => {
