@@ -25,6 +25,9 @@ const router = createRouter({
                 title: "Design Portfolio"
             }
         },
+        // {
+        //     path: "/portfolio", redirect: "/RynStewartPortfolio.pdf"
+        // },
         {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',

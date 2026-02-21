@@ -1,14 +1,7 @@
 <script setup>
 import IconButton from "../components/IconButton.vue";
 import HomeIcon from "../assets/icon/home.svg?raw";
-import {
-    PDFViewer,
-    ZoomMode,
-    EmbedPdfContainer,
-    CommandsPlugin,
-    UIPlugin
-} from '@embedpdf/vue-pdf-viewer';
-import { ref } from "vue";
+import { PDFViewer, ZoomMode } from '@embedpdf/vue-pdf-viewer';
 
 const props = defineProps(["url", "title"]);
 
@@ -25,7 +18,7 @@ const PDF_VIEWER_CONFIG = {
         "navigation"
     ],
     zoom: {
-        defaultZoomLevel: ZoomMode.Automatic
+        defaultZoomLevel: ZoomMode.FitWidth
     },
     theme: {
         preference: "dark",
@@ -40,40 +33,6 @@ const PDF_VIEWER_CONFIG = {
         }
     }
 };
-
-const container = ref(null);
-
-const onInit = cont => {
-    container.value = cont;
-
-    container.value.registerIcons({
-        smiley: {
-            viewBox: '0 0 24 24',
-            paths: [
-                { d: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0', stroke: 'currentColor', fill: 'none' },
-                { d: 'M9 10l.01 0', stroke: 'currentColor', fill: 'none' },
-                { d: 'M15 10l.01 0', stroke: 'currentColor', fill: 'none' },
-                { d: 'M9.5 15a3.5 3.5 0 0 0 5 0', stroke: 'currentColor', fill: 'none' }
-            ]
-        }
-    });
-};
-
-const onReady = registry => {
-    const commands = registry.getPlugin("commands").provides();
-    const ui = registry.getPlugin("ui").provides;
-
-    if (!commands || !ui) return;
-
-    commands.registerCommand({
-        id: "custom.meme",
-        label: "MEME",
-        icon: "smiley",
-        action: () => {
-            alert("asdf")
-        }
-    })
-}
 </script>
 
 <template>
@@ -87,28 +46,18 @@ const onReady = registry => {
                 useRouter="true" />
         </div>
 
+        <embed
+            :src="props.url"
+            type="application/pdf"
+        />
+
+
         <!--<div id="pdf-container">-->
-        <!--    <object :data="props.url" type="application/json" width="100%" height="100%">-->
-        <!--        <p>Pdf not found!!!!</p>-->
-        <!--    </object>-->
+        <!--    <PDFViewer-->
+        <!--        :config="PDF_VIEWER_CONFIG"-->
+        <!--        :style="{ width: '100%', height: '100%' }"-->
+        <!--    />-->
         <!--</div>-->
-
-
-
-        <div id="pdf-container">
-            <PDFViewer
-                @init="onInit"
-                @ready="onReady"
-                :config="PDF_VIEWER_CONFIG"
-                :style="{ width: '100%', height: '100%' }"
-            />
-        <!--<PDFViewer-->
-        <!--    :config="{-->
-        <!--        src: props.url,-->
-        <!--        theme: { preferences: 'system' }-->
-        <!--    }"-->
-        <!--    :style="{ width: '100%', height: '100%' }"/>-->
-        </div>
     </main>
 </template>
 
@@ -119,16 +68,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    //place-self: center;
-    //place-items: center;
-    //place-content: center;
     width: 100%;
-    //flex: 1;
     height: 100%;
-    //max-height: 100px;
     max-height: 100%;
-    //max-width: 400px;
     padding: 10px;
+    //background-color: red;
 
     .header {
         display: flex;
@@ -151,7 +95,25 @@ main {
         place-self: start;
         @include default-font("header");
     }
+
+    embed {
+        width: 100%;
+        height: 100%;
+        //border: 1px solid rgba($color-primary, 1);
+        box-shadow: 0 0 10px black;
+        margin-bottom: 5px;
+
+        @media (screen and min-width: 540px) {
+            //padding: 0 10px;
+            //margin: {
+            //    left: 10px;
+            //    right: 10px;
+            //    bottom: 10px;
+            //}
+        }
+    }
 }
+
 //
 //#pdf-container {
 ////<!--class="h-[600px]
