@@ -62,7 +62,7 @@ onMounted(() => {
 
 <template>
     <!-- LANDING PAGE SECTION -->
-    <LandingPage showArrow="true" />
+    <LandingPage :showArrow="!PLACEHOLDER_MODE" />
 
 
     <!--<PDFPage url="/RynStewartResume.pdf" title="asdf" />-->

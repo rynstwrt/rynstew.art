@@ -62,6 +62,6 @@ const props = defineProps(["showArrow"]);
             </div>
         </main>
 
-        <DownChevron v-if="showArrow==='true'" />
+        <DownChevron v-if="props.showArrow===true" />
     </section>
 </template>
