@@ -22,7 +22,7 @@ const router = createRouter({
         {
             path: "/portfolio", component: PDFPage, props: {
                 url: "/RynStewartPortfolio.pdf",
-                title: "Design Portfolio"
+                title: "Portfolio"
             }
         },
         // {
