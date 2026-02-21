@@ -50,14 +50,6 @@ const PDF_VIEWER_CONFIG = {
             :src="props.url"
             type="application/pdf"
         />
-
-
-        <!--<div id="pdf-container">-->
-        <!--    <PDFViewer-->
-        <!--        :config="PDF_VIEWER_CONFIG"-->
-        <!--        :style="{ width: '100%', height: '100%' }"-->
-        <!--    />-->
-        <!--</div>-->
     </main>
 </template>
 
@@ -113,40 +105,4 @@ main {
         }
     }
 }
-
-//
-//#pdf-container {
-////<!--class="h-[600px]
-////w-full
-////overflow-hidden
-////rounded-xl
-////border
-////border-gray-300
-////shadow-lg
-////dark:border-gray-600"-->
-//
-//    //background-color: red;
-//    width: 100%;
-//    height: 600px;
-//    max-height: 100%;
-//    overflow: hidden;
-//    border: 1px solid gray;
-//    //flex: 1;
-//    //max-height: 100%;
-//    //overflow: clip;
-//
-//    @media (screen and min-width: 540px) {
-//        //padding: 0 10px;
-//    }
-//
-//    object {
-//        //display: none;
-//    }
-//
-//    & > div {
-//        background-color: blue;
-//        //height: 100%;
-//        //display: none;
-//    }
-//}
 </style>

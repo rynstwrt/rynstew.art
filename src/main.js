@@ -4,7 +4,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./views/HomePage.vue";
 import PDFPage from "./views/PDFPage.vue";
 import NotFoundPage from "./views/NotFoundPage.vue";
-// import LandingPage from "./views/LandingPage.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -25,9 +24,6 @@ const router = createRouter({
                 title: "Portfolio"
             }
         },
-        // {
-        //     path: "/portfolio", redirect: "/RynStewartPortfolio.pdf"
-        // },
         {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
