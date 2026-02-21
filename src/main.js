@@ -5,6 +5,7 @@ import HomePage from "./views/HomePage.vue";
 import PDFPage from "./views/PDFPage.vue";
 import NotFoundPage from "./views/NotFoundPage.vue";
 
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -33,7 +34,4 @@ const router = createRouter({
 });
 
 
-createApp(App)
-.use(router)
-// .use(VueSplide)
-.mount('#app');
+createApp(App).use(router).mount('#app');

@@ -1,38 +1,8 @@
 <script setup>
 import IconButton from "../components/IconButton.vue";
 import HomeIcon from "../assets/icon/home.svg?raw";
-import { PDFViewer, ZoomMode } from '@embedpdf/vue-pdf-viewer';
 
 const props = defineProps(["url", "title"]);
-
-const PDF_VIEWER_CONFIG = {
-    src: props.url,
-    disabledCategories: [
-        "annotation",
-        "redaction",
-        "panel",
-        "tools",
-        "document-capture",
-        "document-protect",
-        "page",
-        "navigation"
-    ],
-    zoom: {
-        defaultZoomLevel: ZoomMode.FitWidth
-    },
-    theme: {
-        preference: "dark",
-        dark: {
-            accent: {
-                primary: '#ea580c',        // Lighter purple for dark mode
-                primaryHover: '#c2410c',
-                primaryActive: '#9a3412',
-                primaryLight: '#ffedd5',
-                primaryForeground: '#fff'
-            }
-        }
-    }
-};
 </script>
 
 <template>
@@ -91,18 +61,9 @@ main {
     embed {
         width: 100%;
         height: 100%;
-        //border: 1px solid rgba($color-primary, 1);
         box-shadow: 0 0 10px black;
         margin-bottom: 5px;
 
-        @media (screen and min-width: 540px) {
-            //padding: 0 10px;
-            //margin: {
-            //    left: 10px;
-            //    right: 10px;
-            //    bottom: 10px;
-            //}
-        }
     }
 }
 </style>
