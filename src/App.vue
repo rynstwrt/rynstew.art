@@ -35,6 +35,7 @@ html, body, #app {
 body {
     background-color: $color-background;
     color: $color-light;
+    font-size: 16px;
 
     &::before {
         content: "";
