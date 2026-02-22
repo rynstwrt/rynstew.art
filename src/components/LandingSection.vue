@@ -78,7 +78,7 @@ section#landing {
             font-size: 4rem;
             text-transform: uppercase;
             line-height: 3.1lh;
-            @include default-font("header");
+            font-family: $header-font;
 
             span {
                 font-size: inherit;
@@ -88,8 +88,7 @@ section#landing {
         }
 
         :deep(p#byline) {
-            @include source-code-pro-font();
-            //@include default-font("content");
+            font-family: "Source Code Pro", monospace;
             font-size: 1.05rem !important;
             font-weight: 300;
             line-height: 1.1lh;

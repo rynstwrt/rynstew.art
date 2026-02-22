@@ -55,7 +55,7 @@ main {
         font-weight: 300;
         letter-spacing: 2px;
         place-self: start;
-        @include default-font("header");
+        font-family: $header-font;
     }
 
     embed {
