@@ -34,7 +34,8 @@ body {
         display: block;
         background-size: cover !important;
         z-index: -2;
-        background: url("assets/img/bg-image2.jpeg") no-repeat fixed center;
+        //background: url("assets/img/bg-image2.jpeg") no-repeat fixed center;
+        background: url("/background.webp") no-repeat fixed center;
         opacity: 0.3;
         filter: brightness(30%) contrast(105%);
     }
