@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./views/HomePage.vue";
 import PDFPage from "./views/PDFPage.vue";
 import NotFoundPage from "./views/NotFoundPage.vue";
-import "./index.scss";
+import "./index.css";
 
 
 const router = createRouter({
