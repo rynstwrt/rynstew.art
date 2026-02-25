@@ -96,7 +96,7 @@ section#landing {
 
         p#byline {
             font-family: "Source Code Pro", monospace;
-            //font-optical-sizing: auto;
+            font-optical-sizing: auto;
             /* font-size: 1.05rem !important; */
             font-size: 17px;
             font-weight: 300;
