@@ -1,32 +1,4 @@
-@font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    src: url("fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf");
-}
-
-
-@font-face {
-    font-family: "Roboto";
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    src: url("fonts/roboto/Roboto-VariableFont_wdth,wght.ttf");
-}
-
-
-@font-face {
-    font-family: "Source Code Pro";
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    src: url("fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf");
-}
-
-@font-face {
-    font-family: "Victor Mono";
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    src: url("fonts/victor_mono/VictorMono-VariableFont_wght.ttf");
-}
+@import "fonts.css";
 
 
 :root {
@@ -87,7 +59,6 @@ body {
         display: block;
         background-size: cover !important;
         z-index: -2;
-        /*background: url("assets/img/bg-image2.jpeg") no-repeat fixed center;*/
         background: url("/background.webp") no-repeat fixed center;
         opacity: 0.3;
         filter: brightness(30%) contrast(105%);
