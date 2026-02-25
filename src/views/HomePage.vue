@@ -96,10 +96,10 @@ section#landing {
 
         p#byline {
             font-family: "Source Code Pro", monospace;
-            font-size: 1.05rem !important;
+            //font-size: 1.05rem !important;
+            font-size: 17px;
             font-weight: 300;
             line-height: 1.1lh;
-
         }
 
 
