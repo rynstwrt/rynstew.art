@@ -25,7 +25,6 @@ const props = defineProps([
 
 <style lang="css" scoped>
     a.icon-btn{
-        //border: 1px solid orange;
         display: flex;
         align-items: center;
         border: 1px solid hsl(from var(--color-light-2) h s l / 0.75);
@@ -39,12 +38,6 @@ const props = defineProps([
 
 
         div.icon-container {
-            //height: 40px;
-            //width: auto;
-            //max-height: 100%;
-            //width: auto;
-            //color: red;
-            //background-color: red;
             width: 25px;
             height: 25px;
             padding: 2px;
@@ -59,7 +52,6 @@ const props = defineProps([
         p {
             color: var(--color-light);
             font-weight: 200;
-            //font-size: 0.85rem;
             font-size: 0.9rem;
             letter-spacing: 1px;
             margin-left: 5px;

@@ -23,8 +23,6 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
         place-items: center;
 
         & > * {
-            //border: 1px solid black;
-            //font-family: $header-font;
         }
 
         h1 {
@@ -43,22 +41,14 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
 
         a.icon-btn {
             margin-top: 40px;
-            //font-size: 10rem !important;
-            //height: 100%;
             padding: 10px 20px;
 
             p {
                 font-size: 1.1rem;
             }
         }
-
-        .icon-btn {
-            //font-size: 4rem !important;
-            //background-color: blue;
-        }
     }
 
     object {
-        //display: none;
     }
 </style>
