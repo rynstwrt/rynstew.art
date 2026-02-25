@@ -24,7 +24,7 @@ const props = defineProps(["url", "title"]);
 </template>
 
 
-<style scoped lang="scss">
+<style scoped lang="css">
 
 main {
     display: flex;
@@ -46,16 +46,16 @@ main {
     }
 
     h1 {
-        color: $color-light-2;
+        color: var(--color-light-2);
         text-decoration: underline;
-        text-decoration-color: $color-primary;
+        text-decoration-color: var(--color-primary);
         text-decoration-thickness: 1px;
         text-underline-offset: 4px;
         font-size: 1.6rem;
         font-weight: 300;
         letter-spacing: 2px;
         place-self: start;
-        font-family: $header-font;
+        font-family: var(--header-font), sans-serif;
     }
 
     embed {

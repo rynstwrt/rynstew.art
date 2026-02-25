@@ -23,24 +23,13 @@ const props = defineProps([
 </template>
 
 
-<style lang="scss" scoped>
-    a {
-        //height: 40px;
-        //display: block;
-        border: 1px solid orange;
+<style lang="css" scoped>
+    a.icon-btn{
+        //border: 1px solid orange;
         display: flex;
         align-items: center;
-        //max-width: fit-content;
-        //width: fit-content;
-        //height: 100%;
-        //height: auto;
-        //padding: 5px 10px;
-        border: 1px solid rgba($color-light-2, 0.75);
-        //border-radius: 2px;
+        border: 1px solid hsl(from var(--color-light-2) h s l / 0.75);
         padding: 5px 7px;
-        //height: 25px;
-        //height: fit-content;
-
         opacity: 0.8;
         transition: opacity .09s ease-out;
 
@@ -49,26 +38,26 @@ const props = defineProps([
         }
 
 
-        .icon-container {
+        div.icon-container {
             //height: 40px;
             //width: auto;
             //max-height: 100%;
             //width: auto;
             //color: red;
+            //background-color: red;
             width: 25px;
             height: 25px;
             padding: 2px;
-            color: $color-primary;
+            color: var(--color-primary);
 
-            :deep(svg) {
-                //width: 100%;
+            & > * {
                 height: 100%;
                 width: auto;
             }
         }
 
         p {
-            color: $color-light;
+            color: var(--color-light);
             font-weight: 200;
             //font-size: 0.85rem;
             font-size: 0.9rem;

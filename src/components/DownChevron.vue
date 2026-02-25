@@ -35,7 +35,7 @@ onMounted(() => {
 
 
 
-<style lang="scss" scoped>
+<style scoped>
 #down-chevron-container {
     width: 45px;
     position: absolute;
@@ -44,7 +44,7 @@ onMounted(() => {
     place-content: center;
 
     svg {
-        color: $color-light-2;
+        color: var(--color-light-2);
         min-width: 100%;
         height: min-content;
     }

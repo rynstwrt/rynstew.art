@@ -16,7 +16,7 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
 </template>
 
 
-<style scoped lang="scss">
+<style scoped lang="css">
     main {
         height: 100%;
         place-content: center;
@@ -29,9 +29,9 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
 
         h1 {
             font-size: 8rem;
-            color: $color-primary;
+            color: var(--color-primary);
             font-weight: 200;
-            font-family: $header-font;
+            font-family: var(--header-font), sans-serif;
             line-height: 6.5lh;
         }
 
@@ -47,7 +47,7 @@ import ResumeIcon from "../assets/icon/resume.svg?raw";
             //height: 100%;
             padding: 10px 20px;
 
-            :deep(p) {
+            p {
                 font-size: 1.1rem;
             }
         }

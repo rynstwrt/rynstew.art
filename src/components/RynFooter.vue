@@ -8,16 +8,16 @@
 
 
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 footer {
-    background-color: $color-surface;
+    background-color: var(--color-surface);
     padding: 7px 15px;
 
     p {
         font-weight: 300;
         font-size: 0.85rem;
         letter-spacing: 1px;
-        color: $color-light-2;
+        color: var(--color-light-2);
 
         span {
             font-size: inherit;
