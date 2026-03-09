@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/app/ui/globals.css";
+import React from "react";
+import { contentFont } from "@/app/ui/fonts";
+import ParticleBackground from "@/app/components/ParticleBackground";
+// import Footer from "@/app/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -8,25 +11,21 @@ export const metadata: Metadata = {
     description: "Ryn Stewart - Developer and Artist.",
     icons: {
         icon: [
-            { url: "/favicon-16x16.png", sizes: "16x16" },
-            { url: "/favicon-32x32.png", sizes: "32x32" }
+            {url: "/icon1.png", sizes: "16x16"},
+            {url: "/icon2.png", sizes: "32x32"}
         ],
-        apple: "/apple-touch-icon.png"
-     }
+        apple: "/apple-icon.png"
+    }
 };
 
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en">
-        <body
-            // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-            {children}
+        <html lang="en" className={`${contentFont.className} antialiased`}>
+        <body>
+        <ParticleBackground/>
+        {children}
+        {/*<Footer />*/}
         </body>
         </html>
     );

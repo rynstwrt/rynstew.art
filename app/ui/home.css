@@ -20,7 +20,7 @@ section#landing {
             font-size: 4rem;
             text-transform: uppercase;
             line-height: 3.1lh;
-            font-family: var(--header-font), sans-serif;
+            /*font-family: var(--header-font), sans-serif;*/
 
             span {
                 font-size: inherit;
@@ -30,7 +30,7 @@ section#landing {
         }
 
         p#byline {
-            font-family: "Source Code Pro", monospace;
+            /*font-family: "Source Code Pro", monospace;*/
             font-optical-sizing: auto;
             /* font-size: 1.05rem !important; */
             font-size: 17px;
