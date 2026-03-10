@@ -1,0 +1,1 @@
+export const ONLY_LANDING_PAGE: boolean = true;

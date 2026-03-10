@@ -3,7 +3,8 @@ import "@/app/ui/global.css";
 import React from "react";
 import { contentFont } from "@/app/ui/fonts";
 import ParticleBackground from "@/app/ui/components/ParticleBackground";
-// import Footer from "@/app/components/Footer";
+import Footer from "@/app/ui/components/Footer";
+import { ONLY_LANDING_PAGE } from "@/app/lib/constants";
 
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <body>
         <ParticleBackground/>
         {children}
-        {/*<Footer />*/}
+        {!ONLY_LANDING_PAGE && <Footer/>}
         </body>
         </html>
     );

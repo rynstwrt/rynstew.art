@@ -10,54 +10,53 @@ import LinkedInIcon from "@/app/icon/linkedin.svg";
 import GitHubIcon from "@/app/icon/github.svg";
 import ResumeIcon from "@/app/icon/resume.svg";
 import { createTimeline, splitText, stagger } from "animejs";
-
-
-function createNameAnimation(el: HTMLElement) {
-    const {words, chars} = splitText(el, {
-        words: true,
-        chars: true
-    });
-
-    createTimeline({
-        defaults: {
-            duration: 600,
-            ease: 'inOut', // ease applied between each keyframes if no ease defined
-        },
-        delay: 150,
-    })
-        .add(words, {
-            y: "-=0.3lh",
-            ease: 'outCubic'
-        }, stagger(100))
-        .add(chars, {
-            duration: 650,
-
-            scale: [
-                {to: 1.123, ease: "in"},
-                {to: 1, ease: "out"}
-            ],
-
-            rotateX: {
-                to: "-1turn",
-                ease: "inOutSine",
-                delay: stagger(35),
-            }
-        }, 0)
-        .add(words, {
-            y: 0,
-            ease: 'outQuad',
-            duration: 400
-        }, stagger(150, {reversed: true}));
-}
+import { ONLY_LANDING_PAGE } from "@/app/lib/constants";
 
 
 export default () => {
     const titleTextRef = useRef<HTMLHeadingElement | null>(null);
 
+
     useEffect(() => {
-        if (titleTextRef.current)
-            createNameAnimation(titleTextRef.current);
+        if (titleTextRef.current) {
+            const {words, chars} = splitText(titleTextRef.current, {
+                words: true,
+                chars: true
+            });
+
+            createTimeline({
+                defaults: {
+                    duration: 600,
+                    ease: 'inOut', // ease applied between each keyframes if no ease defined
+                },
+                delay: 150,
+            })
+                .add(words, {
+                    y: "-=0.3lh",
+                    ease: 'outCubic'
+                }, stagger(100))
+                .add(chars, {
+                    duration: 650,
+
+                    scale: [
+                        {to: 1.123, ease: "in"},
+                        {to: 1, ease: "out"}
+                    ],
+
+                    rotateX: {
+                        to: "-1turn",
+                        ease: "inOutSine",
+                        delay: stagger(35),
+                    }
+                }, 0)
+                .add(words, {
+                    y: 0,
+                    ease: 'outQuad',
+                    duration: 400
+                }, stagger(150, {reversed: true}));
+        }
     }, []);
+
 
     return (
         <section id="landing">
@@ -96,8 +95,7 @@ export default () => {
                 </div>
             </main>
 
-            <DownChevron/>
+            {!ONLY_LANDING_PAGE && <DownChevron/>}
         </section>
-
     );
 }
