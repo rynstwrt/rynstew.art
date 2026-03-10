@@ -5,14 +5,18 @@ import "@/app/ui/home/DownChevron.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { animate } from "animejs";
+import DownChevronIcon from "@/app/icon/downchevron.svg";
 
 
 export default () => {
-    // const chevronContainer = useRef<HTMLDivElement | null>(null);
+    const chevronContainer = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        // animate(chevronContainer.current, {
-        animate("#down-chevron-container", {
+        if (!chevronContainer.current)
+            return;
+
+        animate(chevronContainer.current, {
+        // animate("#down-chevron-container", {
             bottom: "+=7px",
             loop: true,
             alternate: true,
@@ -25,11 +29,12 @@ export default () => {
     return (
         // <div id="down-chevron-container" ref={chevronContainer}>
         <div id="down-chevron-container">
-            <Image
-                src={"/icon/downchevron.svg"}
-                alt={"Down arrow"}
-                width={80}
-                height={80}/>
+            <DownChevronIcon />
+            {/*<Image*/}
+            {/*    src={"/icon/downchevron.svg"}*/}
+            {/*    alt={"Down arrow"}*/}
+            {/*    width={80}*/}
+            {/*    height={80}/>*/}
 
             {/*<svg xmlns="http://www.w3.org/2000/svg"*/}
             {/*     width="80"*/}

@@ -6,9 +6,9 @@
     place-content: center;
 
     svg {
-        /*color: var(--color-light-2);*/
+        color: var(--color-light-2);
         min-width: 100%;
         height: min-content;
-        color: red;
+        /*color: red;*/
     }
 }
