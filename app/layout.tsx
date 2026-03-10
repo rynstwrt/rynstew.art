@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@/app/ui/global.css";
 import React from "react";
 import { contentFont } from "@/app/ui/fonts";
@@ -8,15 +8,28 @@ import ParticleBackground from "@/app/ui/components/ParticleBackground";
 
 export const metadata: Metadata = {
     title: "rynstew.art",
+    applicationName: "rynstew.art",
     description: "Ryn Stewart - Developer and Artist.",
     icons: {
         icon: [
-            {url: "/icon/icon-16.png", sizes: "16x16"},
-            {url: "/icon/icon-32.png", sizes: "32x32"}
+            {
+                url: "/icon/favicon/icon0.svg",
+                type: "image/svg+xml"
+            },
+            {
+                url: "/icon/favicon/icon1.png",
+                sizes: "96x96",
+                type: "image/png"
+            }
         ],
-        apple: "/apple-icon.png"
-    }
+        apple: "/icon/favicon/apple-icon.png"
+    },
 };
+
+
+export const viewport: Viewport = {
+    themeColor: "#fe6000"
+}
 
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {

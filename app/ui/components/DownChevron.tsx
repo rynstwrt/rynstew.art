@@ -1,7 +1,7 @@
 'use client';
 
 
-import "@/app/ui/DownChevron.css";
+import "@/app/ui/home/DownChevron.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { animate } from "animejs";

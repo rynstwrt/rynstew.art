@@ -1,10 +1,10 @@
 'use client';
 
-import "@/app/ui/home.css";
+import "@/app/ui/home/home.css";
 import { headerFont, sourceCodePro } from "@/app/ui/fonts";
-import DownChevron from "@/app/components/DownChevron";
+import DownChevron from "@/app/ui/components/DownChevron";
 import React, { useEffect, useRef } from "react";
-import IconButton from "@/app/components/IconButton";
+import IconButton from "@/app/ui/components/IconButton";
 
 import LinkedInIcon from "@/app/icon/linkedin.svg";
 import GitHubIcon from "@/app/icon/github.svg";
