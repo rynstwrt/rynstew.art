@@ -44,9 +44,13 @@ body {
         bottom: 0;
         left: 0;
         display: block;
-        background-size: cover !important;
+        /*background-size: cover !important;*/
         z-index: -2;
-        background: url("../background.webp") no-repeat fixed center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /*background: url("../background.webp") no-repeat fixed center;*/
         opacity: 0.3;
         filter: brightness(30%) contrast(105%);
     }

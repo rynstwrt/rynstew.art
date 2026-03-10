@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "@/app/ui/globals.css";
+import "@/app/ui/global.css";
 import React from "react";
 import { contentFont } from "@/app/ui/fonts";
-import ParticleBackground from "@/app/components/ParticleBackground";
+import ParticleBackground from "@/app/ui/components/ParticleBackground";
 // import Footer from "@/app/components/Footer";
 
 
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     description: "Ryn Stewart - Developer and Artist.",
     icons: {
         icon: [
-            {url: "/icon1.png", sizes: "16x16"},
-            {url: "/icon2.png", sizes: "32x32"}
+            {url: "/icon/icon-16.png", sizes: "16x16"},
+            {url: "/icon/icon-32.png", sizes: "32x32"}
         ],
         apple: "/apple-icon.png"
     }
