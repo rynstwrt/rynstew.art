@@ -8,7 +8,6 @@ const openSans = Open_Sans({
 
 const roboto = Roboto({
     subsets: ['latin'],
-    // weight: ['']
     weight: "variable"
 });
 
