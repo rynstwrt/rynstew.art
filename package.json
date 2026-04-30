@@ -1,29 +1,27 @@
 {
-    "name": "rynstew.art",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "eslint"
-    },
-    "dependencies": {
-        "@tsparticles/engine": "^3.9.1",
-        "@tsparticles/react": "^3.0.0",
-        "@tsparticles/slim": "^3.9.1",
-        "animejs": "^4.3.6",
-        "next": "16.1.6",
-        "react": "19.2.3",
-        "react-dom": "19.2.3"
-    },
-    "devDependencies": {
-        "@svgr/webpack": "^8.1.0",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "eslint": "^9",
-        "eslint-config-next": "16.1.6",
-        "typescript": "^5"
-    }
+	"name": "rynstew.art",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^5.2.7",
+		"@neoconfetti/svelte": "^2.2.2",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@tailwindcss/vite": "^4.2.2",
+		"svelte": "^5.55.2",
+		"svelte-check": "^4.4.6",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7"
+	}
 }
