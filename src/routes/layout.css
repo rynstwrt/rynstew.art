@@ -8,7 +8,7 @@
 
 
 @theme {
-	--font-open-sans: "Open Sans", sans-serif;
+	--font-open-sans: "Open Sans Variable", sans-serif;
 	--font-source-code-pro: "Source Code Pro Variable", monospace;
 
 	--color-accent: #FF6000;
@@ -20,6 +20,7 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		line-height: 1;
 	}
 
 	html, body {
