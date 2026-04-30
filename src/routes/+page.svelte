@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { base } from "$app/paths";
+    import { resolve } from "$app/paths";
 
     import {
         GithubSolid,
@@ -25,10 +25,10 @@
                            target="_blank"
                            Icon={GithubSolid}
                            classes="aspect-square justify-center"/>
-            <LandingButton href="{base}/portfolio"
+            <LandingButton href={resolve("/portfolio")}
                            Icon={FileLinesOutline}
                            text="View Portfolio"/>
-            <LandingButton href="{base}/resume"
+            <LandingButton href={resolve("/resume")}
                            Icon={FileLinesOutline}
                            text="View Resume"
                            classes="col-span-full"/>

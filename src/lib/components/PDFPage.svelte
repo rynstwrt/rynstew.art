@@ -1,14 +1,14 @@
 <script lang="ts">
     import { HomeOutline } from "flowbite-svelte-icons";
     import LandingButton from "$lib/components/LandingButton.svelte";
-    import { base } from "$app/paths";
+    import { resolve } from "$app/paths";
     import { PDFViewer } from "@embedpdf/svelte-pdf-viewer";
 
     let {src} = $props();
 </script>
 
 
-<LandingButton href="{base}/"
+<LandingButton href={resolve("/")}
                Icon={HomeOutline}
                text="Return Home"
                classes="w-fit place-self-center mt-8 mb-6"/>
