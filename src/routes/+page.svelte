@@ -9,13 +9,7 @@
 </script>
 
 
-<svelte:head>
-    <title>rynstew.art - Home</title>
-    <meta name="description" content="The homepage of Ryn Stewart."/>
-</svelte:head>
-
-
-<main>
+<main class="flex-1 flex flex-col justify-center items-center">
     <div class="w-xs">
         <h1 class="text-6xl font-normal uppercase text-accent">Ryn<br/>Stewart</h1>
         <p class="text-xl font-light font-source-code-pro mt-1">Artist and developer in Dallas, Texas.</p>
@@ -40,9 +34,8 @@
     </div>
 </main>
 
-<style>
-    /*:global(body)*/
 
+<style>
     #social-grid {
         grid-template-columns: auto auto 1fr;
     }

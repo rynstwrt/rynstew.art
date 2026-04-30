@@ -1,14 +1,6 @@
 <script lang="ts">
-    import PDFEmbed from "$lib/components/PDFEmbed.svelte";
+    import PDFPage from "$lib/components/PDFPage.svelte";
 </script>
 
 
-<svelte:head>
-    <title>rynstew.art</title>
-    <meta name="description" content="The design portfolio of Ryn Stewart."/>
-</svelte:head>
-
-
-<div class="h-11/12">
-    <PDFEmbed src="/portfolio.pdf"/>
-</div>
+<PDFPage src="/portfolio.pdf"/>

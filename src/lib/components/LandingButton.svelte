@@ -2,7 +2,7 @@
     let {
         Icon,
         text=undefined,
-        href="",
+        href,
         target="_self",
         classes=""
     } = $props();
