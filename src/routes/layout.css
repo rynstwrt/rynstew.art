@@ -29,6 +29,10 @@
 	body {
 		@apply font-open-sans bg-gray-800 text-gray-200;
 		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		/*justify-content: center;*/
+		/*align-items: center;*/
 
 		&::before {
 			content: "";
@@ -52,6 +56,13 @@
 
 	button:focus:not(:focus-visible) {
 		outline: none;
+	}
+
+	main {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 

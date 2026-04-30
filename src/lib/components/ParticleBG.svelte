@@ -9,11 +9,11 @@
 
 
 <Particles id="tsparticles"
-           class="w-full h-full backdrop-brightness-25 backdrop-contrast-101 backdrop-blur-xs fixed"
+           class="w-full h-full backdrop-brightness-25 backdrop-contrast-101 backdrop-blur-xs fixed -z-1"
            options={{
                 fullScreen: {
                     enable: true,
-                    zIndex: 0
+                    zIndex: -1
                 },
                 detectRetina: true,
                 particles: {
