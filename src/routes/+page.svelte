@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { base } from "$app/paths";
+
     import {
         GithubSolid,
         FileLinesOutline,
@@ -23,10 +25,10 @@
                            target="_blank"
                            Icon={GithubSolid}
                            classes="aspect-square justify-center"/>
-            <LandingButton href="/portfolio"
+            <LandingButton href="{base}/portfolio"
                            Icon={FileLinesOutline}
                            text="View Portfolio"/>
-            <LandingButton href="/resume"
+            <LandingButton href="{base}/resume"
                            Icon={FileLinesOutline}
                            text="View Resume"
                            classes="col-span-full"/>
