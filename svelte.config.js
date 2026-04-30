@@ -10,8 +10,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			// base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-			base: process.argv.includes('dev') ? '' : "/rynstew.art"
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	}
 };
