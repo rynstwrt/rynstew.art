@@ -28,12 +28,6 @@
 		"vite": "^8.0.7"
 	},
 	"dependencies": {
-		"@embedpdf/core": "^2.14.2",
-		"@embedpdf/engines": "^2.14.2",
-		"@embedpdf/plugin-document-manager": "^2.14.2",
-		"@embedpdf/plugin-render": "^2.14.2",
-		"@embedpdf/plugin-scroll": "^2.14.2",
-		"@embedpdf/plugin-viewport": "^2.14.2",
 		"@embedpdf/svelte-pdf-viewer": "^2.14.2",
 		"@fontsource-variable/open-sans": "^5.2.7",
 		"@fontsource-variable/source-code-pro": "^5.2.7",
