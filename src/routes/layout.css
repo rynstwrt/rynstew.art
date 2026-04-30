@@ -1,5 +1,6 @@
 @import 'tailwindcss';
-@import '@fontsource/fira-mono';
+@import '@fontsource-variable/source-code-pro';
+@import '@fontsource-variable/open-sans';
 @plugin 'flowbite/plugin';
 @custom-variant dark (&:where(.dark, .dark *));
 @source "../../node_modules/flowbite-svelte/dist";
@@ -7,34 +8,41 @@
 
 
 @theme {
-	--font-inter: "Inter Variable", sans-serif;
+	--font-open-sans: "Open Sans", sans-serif;
 	--font-source-code-pro: "Source Code Pro Variable", monospace;
 
-	--color-primary-50: #fff5f2;
-	--color-primary-100: #fff1ee;
-	--color-primary-200: #ffe4de;
-	--color-primary-300: #ffd5cc;
-	--color-primary-400: #ffbcad;
-	--color-primary-500: #fe795d;
-	--color-primary-600: #ef562f;
-	--color-primary-700: #eb4f27;
-	--color-primary-800: #cc4522;
-	--color-primary-900: #a5371b;
+	--color-accent: #FF6000;
 }
 
 
 @layer base {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
 	html, body {
-		@apply font-inter bg-gray-800 text-white;
+		height: 100%;
 	}
 
 	body {
+		@apply font-open-sans bg-gray-800 text-gray-200;
 		min-height: 100vh;
-		margin: 0;
-		background-image: url("$lib/images/city.jpg");
-		background-size: cover;
-		background-position: left;
-		background-repeat: no-repeat;
+
+		&::before {
+			content: "";
+			background-image: url("$lib/images/city.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
 	}
 
 	input, button {

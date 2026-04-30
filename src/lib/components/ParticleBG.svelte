@@ -9,10 +9,11 @@
 
 
 <Particles id="tsparticles"
+           class="w-full h-full backdrop-brightness-25 backdrop-contrast-101 backdrop-blur-xs fixed"
            options={{
                 fullScreen: {
                     enable: true,
-                    zIndex: -1
+                    zIndex: 0
                 },
                 detectRetina: true,
                 particles: {
@@ -25,7 +26,7 @@
                     opacity: {
                         value: {
                             min: 0.1,
-                            max: .25
+                            max: .1
                         },
                         animation: {
                             enable: true,
@@ -35,7 +36,7 @@
                     size: {
                         value: {
                             min: .2,
-                            max: 2.5
+                            max: 3
                         }
                     },
                     move: {

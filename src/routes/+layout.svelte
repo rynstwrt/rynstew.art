@@ -1,5 +1,6 @@
 <script lang="ts">
     import './layout.css';
+    import ParticleBg from "$lib/components/ParticleBG.svelte";
     let {children} = $props();
 </script>
 
@@ -9,5 +10,7 @@
     <meta name="description" content="The homepage of rynstew.art."/>
 </svelte:head>
 
+
+<ParticleBg/>
 
 {@render children()}
