@@ -1,8 +1,8 @@
 <script lang="ts">
     import { HomeOutline } from "flowbite-svelte-icons";
     import LandingButton from "$lib/components/LandingButton.svelte";
-    import PDFEmbed from "$lib/components/PDFEmbed.svelte";
     import { base } from "$app/paths";
+    import { PDFViewer } from "@embedpdf/svelte-pdf-viewer";
 
     let {src} = $props();
 </script>
@@ -14,6 +14,33 @@
                classes="w-fit place-self-center mt-8 mb-6"/>
 
 
-<main class="flex-1 rounded-md overflow-hidden">
-    <PDFEmbed {src}/>
+<main class="w-full flex-1 rounded-lg overflow-hidden max-w-5xl place-self-center">
+    <PDFViewer
+        config={{
+            src: src,
+            theme: {
+                preference: 'dark',
+                dark: {
+                    accent: {
+                        primary: "#ff6000"
+                    }
+                }
+            },
+            disabledCategories: [
+                "annotation",
+                "form",
+                "annotation-shape",
+                "redaction",
+                "document-open",
+                "document-close",
+                "document-print",
+                "document-protect",
+                "panel",
+                "tools",
+                "selection",
+                "history",
+                "insert"
+            ]
+        }}
+        class="w-full h-full"/>
 </main>
