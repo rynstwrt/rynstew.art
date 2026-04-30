@@ -14,5 +14,4 @@
 
 
 <ParticleBg/>
-
 {@render children()}
