@@ -1,6 +1,5 @@
 <script lang="ts">
     import {
-        // GlobeOutline,
         GlobeSolid,
         PenNibSolid
     } from "flowbite-svelte-icons";

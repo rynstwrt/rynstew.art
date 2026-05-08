@@ -40,7 +40,7 @@
         <div class="embla__container flex items-center touch-pan-y touch-pinch-zoom">
             {#each images as image}
                 <div class="embla__slide h-full flex justify-center">
-                    <img src={asset(image.src)} alt={image.alt}/>
+                    <enhanced:img src={image.src} alt={image.alt}/>
                 </div>
             {/each}
         </div>
