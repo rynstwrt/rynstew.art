@@ -9,11 +9,11 @@
 
 
 <div class="h-5/12 flex justify-center items-center gap-4 *:w-40 *:justify-center">
-    <BoxButton href={resolve("/portfolio/websites")}
+    <BoxButton href={resolve("/websites")}
                Icon={GlobeSolid}
                text="Websites"/>
 
-    <BoxButton href={resolve("/portfolio/design")}
+    <BoxButton href={resolve("/design")}
                Icon={PenNibSolid}
                text="Design"/>
 </div>
