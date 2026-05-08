@@ -9,6 +9,13 @@
 
     let {images} = $props();
 
+    // const imageModules = import.meta.glob("/images/portfolio/design/*.{png,PNG,jpg,JPG,jpeg,JPEG}", {
+    //     eager: true,
+    //     query: {
+    //         enhanced: true
+    //     }
+    // });
+
     let index = $state(0);
     let altText = $derived(images[index].alt);
 
@@ -38,9 +45,11 @@
          use:useEmblaCarousel
          onemblaInit={onEmblaInit}>
         <div class="embla__container flex items-center touch-pan-y touch-pinch-zoom">
+            <!--{#each Object.entries(imageModules) as [_path, module]}-->
             {#each images as image}
                 <div class="embla__slide h-full flex justify-center">
-                    <enhanced:img src={asset(image.src)} alt={image.alt}/>
+                    <!--<enhanced:img src={module.default}/>-->
+                    <enhanced:img src={image.src} alt={image.alt}/>
                 </div>
             {/each}
         </div>
