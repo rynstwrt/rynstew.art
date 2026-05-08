@@ -27,7 +27,7 @@
                        classes="aspect-square justify-center"/>
             <BoxButton href={resolve("/portfolio")}
                        Icon={FileLinesOutline}
-                       text="View Portfolio"/>
+                       text="Websites/Portfolio"/>
             <BoxButton href={resolve("/resume")}
                        Icon={FileLinesOutline}
                        text="View Resume"
