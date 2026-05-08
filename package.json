@@ -14,7 +14,6 @@
 	},
 	"devDependencies": {
 		"@neoconfetti/svelte": "^2.2.2",
-		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.57.0",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
@@ -33,6 +32,7 @@
 		"@fontsource-variable/open-sans": "^5.2.7",
 		"@fontsource-variable/source-code-pro": "^5.2.7",
 		"@tsparticles/slim": "^3.9.1",
-		"@tsparticles/svelte": "^3.1.1"
+		"@tsparticles/svelte": "^3.1.1",
+		"embla-carousel-svelte": "^8.6.0"
 	}
 }
