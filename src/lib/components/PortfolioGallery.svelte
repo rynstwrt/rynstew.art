@@ -39,7 +39,7 @@
 </script>
 
 
-<div class="embla bg-gray-800 p-3 m-2 sm:m-5 rounded-md max-w-150 place-self-center">
+<div class="embla bg-gray-800 p-3 mx-2 mt-10 sm:mx-5 rounded-md max-w-150 place-self-center">
     <div class="embla__viewport bg-gray-700 overflow-hidden"
          use:useEmblaCarousel
          onemblaInit={onEmblaInit}>

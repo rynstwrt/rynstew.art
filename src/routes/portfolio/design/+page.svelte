@@ -1,10 +1,4 @@
 <script lang="ts">
-    import {
-        HomeOutline,
-        ArrowLeftOutline
-    } from "flowbite-svelte-icons";
-    import { resolve } from "$app/paths";
-    import BoxButton from "$lib/components/BoxButton.svelte";
     import PortfolioGallery from "$lib/components/PortfolioGallery.svelte";
 
     let images = [
@@ -26,17 +20,6 @@
         // {alt: "Letter R Design 9", src: "/src/lib/images/portfolio/design/r_designs/9.png", width: 450, height: 450},
     ];
 </script>
-
-
-<div class="flex justify-center gap-2 mt-8 mb-6 *:min-w-25 *:justify-center">
-    <BoxButton href={resolve("/portfolio")}
-               Icon={ArrowLeftOutline}
-               text="Back"/>
-
-    <BoxButton href={resolve("/")}
-               Icon={HomeOutline}
-               text="Return Home"/>
-</div>
 
 
 <PortfolioGallery {images} />

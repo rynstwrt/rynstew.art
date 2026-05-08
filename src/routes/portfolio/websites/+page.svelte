@@ -1,21 +1,6 @@
 <script lang="ts">
-    import {
-        HomeOutline,
-        ArrowLeftOutline
-    } from "flowbite-svelte-icons";
-    import { resolve } from "$app/paths";
-    import BoxButton from "$lib/components/BoxButton.svelte";
+
 </script>
 
 
-<div class="flex justify-center gap-2 mt-8 mb-6 *:min-w-25 *:justify-center">
-    <BoxButton href={resolve("/portfolio")}
-               Icon={ArrowLeftOutline}
-               text="Back"/>
-
-    <BoxButton href={resolve("/")}
-               Icon={HomeOutline}
-               text="Return Home"/>
-</div>
-
-
+<p class="text-center mt-10 text-xl font-light tracking-wide">Coming soon.</p>
