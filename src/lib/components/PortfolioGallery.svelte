@@ -13,13 +13,6 @@
 
     let emblaApi: any;
 
-    // const options = {
-        // loop: false,
-        // align: "center",
-        // startIndex: index,
-        // plugins: []
-    // }
-
     function onEmblaInit(event: any) {
         emblaApi = event.detail;
         console.log(emblaApi)

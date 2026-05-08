@@ -3,8 +3,6 @@
 
     import ParticleBg from "$lib/components/ParticleBG.svelte";
     import Header from "$lib/components/Header.svelte";
-    import {page} from "$app/state";
-    import { resolve } from "$app/paths";
 
     let {children} = $props();
 </script>
@@ -23,9 +21,5 @@
 
 
 <ParticleBg/>
-
-{#if page.url.pathname !== resolve("/")}
-    <Header />
-{/if}
-
+<Header />
 {@render children()}

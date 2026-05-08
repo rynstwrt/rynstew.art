@@ -10,7 +10,7 @@
 </script>
 
 
-<Navbar class="px-5 py-4">
+<Navbar class="px-5 py-4 z-100">
     <NavBrand href={resolve("/")} class="flex items-center">
         <img src="/src/lib/images/logo.svg"
              class="me-3 h-7 pt-0.5"
