@@ -1,6 +1,13 @@
 <script lang="ts">
-    import * as Carousel from "$lib/components/ui/carousel/index.js";
-    import type { CarouselAPI } from "$lib/components/ui/carousel/context.js";
+    import {
+        Gallery,
+        Carousel,
+        CarouselIndicators,
+        Controls,
+        Thumbnails
+    } from "flowbite-svelte";
+    import { scale } from "svelte/transition";
+    import { quintOut } from "svelte/easing";
 
     let images = [
         {alt: "Glitch Headshot", src: "OrangeCyanHeadshot.jpg"},
@@ -21,43 +28,31 @@
         {alt: "Letter R Design 9", src: "r_designs/9.png"},
     ];
 
-    images.forEach(image => image.src = `/src/lib/images/portfolio/${image.src}`);
+    images.forEach(image => image.src = `/src/lib/images/portfolio/${image.src}`)
 
-    // let api = $state<CarouselAPI>();
+    let index = $state(0);
 
-    // const count = $derived(api ? api.scrollSnapList().length : 0);
-    let current = $state(0);
+    const transition = (node: HTMLElement) => scale(node, { duration: 500, easing: quintOut });
 
-    // $effect(() => {
-    //     if (api) {
-    //         current = api.selectedScrollSnap() + 1;
-    //         api.on("select", () => {
-    //             current = api!.selectedScrollSnap() + 1;
-    //         });
-    //     }
-    // });
 </script>
 
 
-<Carousel.Root
-        class="w-full max-w-xs mx-auto"
-        opts={{
-            align: "center"
-        }}
-        orientation="vertical">
-    <Carousel.Content class="h-[40vh]">
-        {#each images as image}
-            <Carousel.Item>
-                <div class="p-1 h-full flex items-center">
-                    <img src={image.src} alt={image.alt}/>
-                </div>
-            </Carousel.Item>
-        {/each}
-    </Carousel.Content>
-    <Carousel.Previous/>
-    <Carousel.Next/>
-</Carousel.Root>
-
-<!--<div class="text-muted-foreground py-2 text-center text-sm">-->
-<!--    Slide {current} of {count}-->
+<!--<div class="max-w-4xl space-y-4">-->
+<!--    <Carousel bind:index={designPortfolioIdx}-->
+<!--              images={designPortfolioImages}>-->
+<!--        <Controls/>-->
+<!--        <CarouselIndicators/>-->
+<!--    </Carousel>-->
+<!--    <Thumbnails images={designPortfolioImages} bind:index={designPortfolioIdx}/>-->
 <!--</div>-->
+
+
+<div class="max-w-4xl m-3">
+    <Carousel {images} {transition} bind:index class="min-h-full">
+        <Controls />
+        <!--<CarouselIndicators />-->
+    </Carousel>
+
+    <Thumbnails {images} bind:index class="bg-transparent" />
+
+</div>

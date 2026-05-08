@@ -1,6 +1,5 @@
 <script lang="ts">
     import './layout.css';
-    import "./globals.css";
 
     import ParticleBg from "$lib/components/ParticleBG.svelte";
 

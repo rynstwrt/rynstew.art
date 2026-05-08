@@ -9,9 +9,6 @@ const config = {
 		adapter: adapter({
 			strict: false
 		}),
-		alias: {
-			"@/*": "/src/lib/*"
-		},
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
