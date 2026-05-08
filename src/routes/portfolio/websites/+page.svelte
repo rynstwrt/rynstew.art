@@ -5,7 +5,6 @@
     } from "flowbite-svelte-icons";
     import { resolve } from "$app/paths";
     import BoxButton from "$lib/components/BoxButton.svelte";
-    import DesignGallery from "$lib/components/DesignGallery.svelte";
 </script>
 
 
