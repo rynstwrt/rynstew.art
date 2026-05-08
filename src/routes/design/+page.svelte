@@ -1,13 +1,6 @@
 <script lang="ts">
     import PortfolioGallery from "$lib/components/PortfolioGallery.svelte";
 
-    // const imageModules = import.meta.glob("images/portfolio/design/**/*.{png,PNG,jpg,JPG,jpeg,JPEG}", {
-    //     eager: true,
-    //     query: {
-    //         enhanced: true
-    //     }
-    // });
-
     let images = [
         {alt: "Glitch Headshot", src: "images/portfolio/design/OrangeCyanHeadshot.jpg", width: 1500, height: 1500},
         {alt: "Nutriwise Company Logo", src: "images/portfolio/design/NutriwiseLogo.png", width: 1000, height: 1000},

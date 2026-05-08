@@ -5,16 +5,9 @@
     } from "flowbite-svelte-icons";
     import { Button } from "flowbite-svelte";
     import useEmblaCarousel from 'embla-carousel-svelte';
-    import { asset } from "$app/paths";
+    // import { asset } from "$app/paths";
 
     let {images} = $props();
-
-    // const imageModules = import.meta.glob("/images/portfolio/design/*.{png,PNG,jpg,JPG,jpeg,JPEG}", {
-    //     eager: true,
-    //     query: {
-    //         enhanced: true
-    //     }
-    // });
 
     let index = $state(0);
     let altText = $derived(images[index].alt);
@@ -23,7 +16,6 @@
 
     function onEmblaInit(event: any) {
         emblaApi = event.detail;
-        // console.log(emblaApi)
     }
 
     function onPrev() {
@@ -50,6 +42,7 @@
                 <div class="embla__slide h-full flex justify-center">
                     <!--<enhanced:img src={module.default}/>-->
                     <enhanced:img src={image.src} alt={image.alt}/>
+                    <!--<enhanced:img src={asset(image.src)} alt={image.alt}/>-->
                 </div>
             {/each}
         </div>
