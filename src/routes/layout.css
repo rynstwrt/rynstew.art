@@ -39,7 +39,7 @@
 
 		&::before {
 			content: "";
-			background-image: url("$lib/images/city.jpg");
+			background-image: url("$lib/images/city.webp");
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
