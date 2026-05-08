@@ -6,13 +6,13 @@
         NavHamburger,
         NavBrand
     } from "flowbite-svelte";
-    import { resolve } from "$app/paths";
+    import { resolve, asset } from "$app/paths";
 </script>
 
 
 <Navbar class="px-5 py-4 z-100">
     <NavBrand href={resolve("/")} class="flex items-center">
-        <img src="/src/lib/images/logo.svg"
+        <img src={asset("/src/lib/images/logo.svg")}
              class="me-3 h-7 pt-0.5"
              alt="Ryn Logo" />
         <span class="self-center text-xl font-semibold tracking-wide whitespace-nowrap text-white">Ryn.</span>
