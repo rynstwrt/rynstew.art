@@ -1,19 +1,20 @@
 <script lang="ts">
     import {
+        // GlobeOutline,
         GlobeSolid,
         PenNibSolid
     } from "flowbite-svelte-icons";
     import { resolve } from "$app/paths";
-    import BoxButton from "$lib/components/BoxButton.svelte";
+    import PortfolioButton from "$lib/components/PortfolioButton.svelte";
 </script>
 
 
-<div class="h-5/12 flex justify-center items-center gap-4 *:w-40 *:justify-center">
-    <BoxButton href={resolve("/websites")}
-               Icon={GlobeSolid}
-               text="Websites"/>
+<div class="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center h-full gap-15">
+    <PortfolioButton Icon={GlobeSolid}
+                     text="Websites"
+                     href={resolve("/websites")}/>
 
-    <BoxButton href={resolve("/design")}
-               Icon={PenNibSolid}
-               text="Design"/>
+    <PortfolioButton Icon={PenNibSolid}
+                     text="Design"
+                     href={resolve("/design")}/>
 </div>
