@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Button, Heading, P, Card } from "flowbite-svelte";
-    import { ArrowRightOutline, LinkOutline } from "flowbite-svelte-icons";
+    import { LinkOutline } from "flowbite-svelte-icons";
 
     const websites = [
         {
@@ -54,38 +54,9 @@
                         target="_blank"
                         class="bg-accent w-35 mt-5 hover:shadow-xl transition-shadow">
                     Visit
-                    <!--<ArrowRightOutline class="ms-2 h-6 w-6"/>-->
                     <LinkOutline class="ms-2 h-5 w-5"/>
                 </Button>
             </div>
         </Card>
     {/each}
 </div>
-
-
-<!--<div class="flex flex-col items-center mt-2 px-4 gap-3">-->
-<!--    {#each websites as website}-->
-<!--        <Card class="p-4 sm:p-6 md:p-6 w-80">-->
-<!--            <Heading tag="h2"-->
-<!--                     class="mb-2 text-xl leading-none font-semibold text-gray-900 md:text-2xl">{website.title}</Heading>-->
-
-<!--            <P size="sm" class="text-gray-400!">{website.description}</P>-->
-
-<!--            <enhanced:img src={website.img}-->
-<!--                          alt={`${website.title} preview`}-->
-<!--                          class="my-4 rounded-lg  border border-gray-300/10"/>-->
-
-<!--            <div class="flex items-center space-x-4">-->
-<!--                <Button href={website.href}-->
-<!--                        target="_blank"-->
-<!--                        size="sm"-->
-<!--                        class="bg-accent px-8">-->
-<!--                    Visit-->
-<!--                </Button>-->
-<!--            </div>-->
-<!--        </Card>-->
-<!--    {/each}-->
-<!--</div>-->
-
-
-<!--<p class="text-center pt-7 pb-12 text-lg font-light">More websites will be added soon.</p>-->
