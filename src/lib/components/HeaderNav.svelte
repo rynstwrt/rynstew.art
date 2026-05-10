@@ -21,7 +21,7 @@
 
     <NavHamburger/>
 
-    <NavUl {activeUrl} class="*:font-normal">
+    <NavUl {activeUrl}>
         <NavLi href={resolve("/")}>Home</NavLi>
         <NavLi href={resolve("/resume")}>Resume</NavLi>
         <NavLi href={resolve("/websites")}>Websites</NavLi>

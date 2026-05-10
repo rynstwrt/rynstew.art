@@ -3,7 +3,7 @@
         Icon,
         text=undefined,
         href,
-        target="_self",
+        target=undefined,
         classes=""
     } = $props();
 </script>

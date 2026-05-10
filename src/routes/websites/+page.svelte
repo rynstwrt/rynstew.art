@@ -20,7 +20,7 @@
 </script>
 
 
-<p class="text-center mt-10 text-xl font-light tracking-wide">Coming soon.</p>
+<p class="text-center mt-10 text-xl font-light">Coming soon.</p>
 
 
 <!--{#each websites as website}-->
