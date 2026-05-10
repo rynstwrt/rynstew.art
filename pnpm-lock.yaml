@@ -26,6 +26,9 @@ importers:
       embla-carousel-svelte:
         specifier: ^8.6.0
         version: 8.6.0(svelte@5.55.5)
+      flowbite-svelte-blocks:
+        specifier: ^2.1.0
+        version: 2.1.0(@sveltejs/kit@2.59.1(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.5)(vite@8.0.11(jiti@2.7.0)))(svelte@5.55.5)(typescript@6.0.3)(vite@8.0.11(jiti@2.7.0)))(svelte@5.55.5)(tailwindcss@4.3.0)
     devDependencies:
       '@neoconfetti/svelte':
         specifier: ^2.2.2
@@ -1187,6 +1190,18 @@ packages:
 
   flowbite-datepicker@2.0.0:
     resolution: {integrity: sha512-m81hl0Bimq45MUg4maJLOnXrX+C9lZ0AkjMb9uotuVUSr729k/YiymWDfVAm63AYDH7g7y3rI3ke3XaBzWWqLw==}
+
+  flowbite-svelte-blocks@2.1.0:
+    resolution: {integrity: sha512-WWrtY/py411Lp3oGTp+q6jSwa3uXDw6BGEzoHRKKawxY60DAtkinP8MygaNS3iLmw3eSjaTnNykm1RYR2uCPZQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.26.0
+      svelte: ^5.29.0
+      tailwindcss: ^4.1.11
+
+  flowbite-svelte-icons@2.3.0:
+    resolution: {integrity: sha512-D7EeVAGt3NtufTjps8xKRYyZpAaQbuX+8PkohVqG07RsJf9pWJHwZ+RPBi3kUlECnq0WtYU/3jnLuz7Km4Y79g==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   flowbite-svelte-icons@3.1.0:
     resolution: {integrity: sha512-ZKBFlJY6VbORSo0aHvhqP152/QQN+YKU2upZA6lOkIbTN2vHgENerzd+PnZpLA+os3QbJTG2LKK0l7Zeh1vDBQ==}
@@ -2644,6 +2659,24 @@ snapshots:
       '@tailwindcss/postcss': 4.3.0
     transitivePeerDependencies:
       - rollup
+
+  flowbite-svelte-blocks@2.1.0(@sveltejs/kit@2.59.1(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.5)(vite@8.0.11(jiti@2.7.0)))(svelte@5.55.5)(typescript@6.0.3)(vite@8.0.11(jiti@2.7.0)))(svelte@5.55.5)(tailwindcss@4.3.0):
+    dependencies:
+      '@sveltejs/kit': 2.59.1(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.5)(vite@8.0.11(jiti@2.7.0)))(svelte@5.55.5)(typescript@6.0.3)(vite@8.0.11(jiti@2.7.0))
+      flowbite: 3.1.2
+      flowbite-svelte: 1.33.1(svelte@5.55.5)(tailwindcss@4.3.0)
+      flowbite-svelte-icons: 2.3.0(svelte@5.55.5)
+      svelte: 5.55.5
+      tailwind-merge: 3.6.0
+      tailwindcss: 4.3.0
+    transitivePeerDependencies:
+      - rollup
+
+  flowbite-svelte-icons@2.3.0(svelte@5.55.5):
+    dependencies:
+      clsx: 2.1.1
+      svelte: 5.55.5
+      tailwind-merge: 3.6.0
 
   flowbite-svelte-icons@3.1.0(svelte@5.55.5):
     dependencies:
