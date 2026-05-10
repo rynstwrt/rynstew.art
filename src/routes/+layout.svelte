@@ -2,7 +2,7 @@
     import './layout.css';
 
     import ParticleBg from "$lib/components/ParticleBG.svelte";
-    import Header from "$lib/components/Header.svelte";
+    import HeaderNav from "$lib/components/HeaderNav.svelte";
 
     let {children} = $props();
 </script>
@@ -21,5 +21,5 @@
 
 
 <ParticleBg/>
-<Header />
+<HeaderNav />
 {@render children()}
