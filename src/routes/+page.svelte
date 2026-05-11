@@ -4,7 +4,6 @@
     import {
         GithubSolid,
         FileLinesOutline,
-        LinkedinSolid,
         GlobeOutline,
         PenNibOutline
     } from "flowbite-svelte-icons";
