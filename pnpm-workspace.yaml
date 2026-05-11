@@ -1,3 +1,6 @@
+allowBuilds:
+  '@tsparticles/engine': true
+  sharp: true
 ignoredBuiltDependencies:
   - es5-ext
 onlyBuiltDependencies:

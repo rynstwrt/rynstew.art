@@ -4,7 +4,8 @@
     let {src} = $props();
 </script>
 
-<main class="w-full flex-1 rounded-lg overflow-hidden max-w-5xl place-self-center">
+
+<main class="h-full sm:mx-2 md:mx-5 lg:mx-10 xl:mx-20 rounded-sm overflow-hidden">
     <PDFViewer
         config={{
             src: src,
@@ -32,5 +33,5 @@
                 "insert"
             ]
         }}
-        class="w-full h-full"/>
+        class="h-full"/>
 </main>

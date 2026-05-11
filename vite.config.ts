@@ -5,8 +5,8 @@ import { enhancedImages } from "@sveltejs/enhanced-img";
 
 export default defineConfig({
     plugins: [
+        sveltekit(),
         tailwindcss(),
-        enhancedImages(),
-        sveltekit()
-    ]
+        enhancedImages()
+    ],
 });

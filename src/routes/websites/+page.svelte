@@ -42,8 +42,7 @@
         <Card img={website.img}
               size="lg"
               horizontal
-              class="shadow-md">
-
+              class="shadow-md rounded-sm">
             <div class="m-6">
                 <Heading tag="h2"
                          class="mb-2 text-2xl! font-bold text-gray-900 tracking-tight">{website.title}</Heading>
@@ -52,7 +51,8 @@
 
                 <Button href={website.href}
                         target="_blank"
-                        class="bg-accent w-35 mt-5 hover:shadow-xl transition-shadow">
+                        size="sm"
+                        class="w-35 mt-5 shadow-sm transition-shadow">
                     Visit
                     <LinkOutline class="ms-2 h-5 w-5"/>
                 </Button>
