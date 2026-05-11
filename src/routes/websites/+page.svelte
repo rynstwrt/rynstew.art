@@ -3,17 +3,23 @@
     import { LinkOutline } from "flowbite-svelte-icons";
 
     const websites = [
+        // {
+        //     title: "Andrew's Electronics",
+        //     description: "A website created for Andrew's Electronics, a vintage electronics repair business.",
+        //     href: "https://rynstwrt.github.io/andrewselectronics.us",
+        //     img: "images/websites/andrewselectronics.png"
+        // },
+        // {
+        //     title: "Off The Block",
+        //     description: "A website created for a Minecraft server.",
+        //     href: "https://offtheblock.lol",
+        //     img: "images/websites/offtheblock.png"
+        // },
         {
-            title: "Andrew's Electronics",
-            description: "A website created for Andrew's Electronics, a vintage electronics repair business.",
-            href: "https://rynstwrt.github.io/andrewselectronics.us",
-            img: "images/websites/andrewselectronics.png"
-        },
-        {
-            title: "Off The Block",
-            description: "A website created for a Minecraft server.",
-            href: "https://offtheblock.lol",
-            img: "images/websites/offtheblock.png"
+            title: "WebResumeBuilder",
+            description: "A web app to create a résumé online for free.",
+            href: "https://rynstwrt.github.io/WebResumeBuilder",
+            img: "images/websites/webresumebuilder.png"
         },
         {
             title: "Domain Dissidence",
